@@ -36,8 +36,11 @@
 // C2D_Texts are cached by string in one persistent buffer, so a label that
 // does not change is parsed once, not once per frame.
 //
-// Measurement (width / truncate) goes through the glyph-width cache in
-// StringUtils::textWidth and never parses at all.
+// UI text follows the selected language. Chinese localizations request the
+// matching 3DS regional shared font (Traditional Chinese -> Taiwan,
+// Simplified Chinese -> China) instead of assuming the console's native font
+// contains those glyphs. If the requested regional font is unavailable,
+// Citro2D's normal system font is used as a fallback.
 //
 // UI-thread only, like every other draw call. Call frameTick() once per
 // frame from the main loop; it bounds the cache between frames.
@@ -61,17 +64,17 @@ public:
     // C2D alignment flags (e.g. C2D_AlignCenter, which makes `x` the center).
     void drawWrapped(const std::string& s, float x, float y, float scale, u32 color, float maxWidth, float depth = 0.5f, u32 alignFlags = 0);
 
-    // Measures without parsing (multi-line strings measure their widest line).
-    float width(const std::string& s, float scale) const;
+    // Measures with the same font used to draw the current UI language.
+    float width(const std::string& s, float scale);
 
     // Largest scale <= `scale` at which `s` fits maxWidth, floored at
     // minScale. Width is linear in scale so this is a single measure, not a
     // search. If even minScale overflows, the caller truncates at minScale.
-    float fitScale(const std::string& s, float maxWidth, float scale, float minScale) const;
+    float fitScale(const std::string& s, float maxWidth, float scale, float minScale);
 
     // Shortens `s` with a trailing ellipsis until it fits maxWidth. Respects
-    // UTF-8 codepoint boundaries and never parses.
-    std::string truncate(const std::string& s, float maxWidth, float scale) const;
+    // UTF-8 codepoint boundaries and measures with the active UI font.
+    std::string truncate(const std::string& s, float maxWidth, float scale);
 
     // ---- monospace ---------------------------------------------------------
     // The script log pane's font: a bundled Space Mono built into a .bcfnt by
@@ -103,14 +106,29 @@ private:
 
     // Returns the cached parse of `s`, parsing (and, if the buffer is nearly
     // full, rebuilding) as needed. The pointer is valid until the next rebuild.
-    // `font` selects the face; nullptr is the system font.
     const C2D_Text* obtain(const std::string& s, C2D_Font font);
+
+    // Resolves the font for the currently selected UI language. A language
+    // change clears parsed glyphs before switching faces.
+    C2D_Font uiFont(void);
+
+    // Width/height helpers that parse with the active UI font so centering,
+    // fitting and truncation use the exact same glyph metrics as drawing.
+    float measureWidth(const std::string& s, float scale);
+    float measureHeight(const std::string& s, float scale);
+
     void rebuild(void);
 
     C2D_TextBuf mBuf;
-    // One cache per face: the same string parsed in two fonts is two different
-    // glyph runs, so they cannot share a key.
-    std::unordered_map<std::string, C2D_Text> mCache, mMonoCache;
+    // One cache per face: the same string parsed in multiple fonts is multiple
+    // different glyph runs, so they cannot share a key.
+    std::unordered_map<std::string, C2D_Text> mCache, mUiCache, mMonoCache;
+
+    // Regional UI font. nullptr means Citro2D's native system font, which is
+    // also the correct representation when the console is already that region.
+    C2D_Font mUiFont = nullptr;
+    std::string mUiLanguage;
+
     C2D_Font mMono     = nullptr;
     bool mMonoTried    = false;
     float mMonoAdvance = 0.0f; // both measured once, in atlas pixels
