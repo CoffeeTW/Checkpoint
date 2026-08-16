@@ -38,7 +38,7 @@ namespace {
     bool isSupported(const std::string& code)
     {
         return code == "en" || code == "it" || code == "es" || code == "fr" || code == "de" || code == "pt" || code == "nl" || code == "ja" ||
-               code == "zh" || code == "ru";
+               code == "zh" || code == "zh-TW" || code == "ru";
     }
 }
 
