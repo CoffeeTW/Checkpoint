@@ -1,0 +1,322 @@
+name: Polish Taiwan Traditional Chinese localization
+
+on:
+  push:
+    branches:
+      - agent/traditional-chinese
+
+permissions:
+  contents: write
+
+jobs:
+  proofread:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply Taiwan Traditional Chinese proofreading
+        run: |
+          python3 - <<'PY'
+          import json
+          import re
+          from pathlib import Path
+
+          common = {
+            'common.unavailable': '無法使用',
+            'overlay.use_folder': '使用此資料夾',
+            'overlay.up': '上一層',
+            'overlay.no_subfolders': '此處沒有子資料夾。',
+            'overlay.use_folder_hint': '按 X 使用此資料夾',
+            'outcome.send_zip': '無法建立備份套件。',
+            'outcome.send_too_large': '備份過大，無法傳送（超過 4 GiB）。',
+            'outcome.send_socket': '無法建立網路連線。',
+            'outcome.send_resolve': 'IP 位址無效。',
+            'outcome.send_connect': '連線失敗。',
+            'outcome.send_no_response': '接收端沒有回應。',
+            'outcome.send_receiver_error': '接收端錯誤：{0}',
+            'outcome.send_failed': '傳輸失敗。',
+            'outcome.send_interrupted': '連線已中斷。接收端可能已取消傳輸。',
+            'transfer.send': '傳送',
+            'transfer.receive': '接收',
+            'transfer.unnamed': '（未命名備份）',
+            'transfer.file_received': '檔案已接收',
+            'transfer.refresh_hint': '按 A 立即重新整理',
+            'transfer.receiver_stopped': '接收已停止',
+            'transfer.downloading': '正在下載備份',
+            'transfer.close_hint': '按 B 關閉',
+            'transfer.cancel_hint': '長按 B 取消',
+            'transfer.cancelling': '正在取消…',
+            'transfer.cancelled': '傳輸已取消。',
+            'transfer.completed': '傳輸已完成。',
+            'main.mode.backup': '備份',
+            'main.mode.restore': '還原',
+            'main.mode.clearing': '清除中',
+            'main.mode.verify': '驗證',
+            'main.mode.extracting_package': '正在解壓縮套件',
+            'main.mode.sending_backup': '正在傳送備份',
+            'main.copying': '正在複製檔案',
+            'main.file_n': '檔案 {0} / {1}',
+            'main.new_backup': '新增備份',
+            'main.confirm_restore': '要還原所選的儲存資料嗎？',
+            'main.confirm_delete': '要刪除所選的備份嗎？',
+            'main.confirm_backup_save': '要備份所選的儲存資料嗎？',
+            'main.no_titles': '沒有可用的遊戲。',
+            'main.transferring': '正在傳輸備份',
+            'main.backup_empty': '所選備份是空的。',
+            'main.receiver_failed': '無法啟動接收端。',
+            'main.invalid_ip_port': 'IP:連接埠格式無效。',
+            'main.pin_invalid': 'PIN 必須是 4 位數。',
+            'main.scripts': '指令碼',
+            'menu.title': '選單',
+            'scripts.pick_prompt': '執行指令碼',
+            'scripts.universal_tag': '通用',
+            'scripts.overridden_tag': '已覆寫',
+            'scripts.confirm_run': '要執行「{0}」嗎？\n指令碼可能會修改儲存資料與 SD 卡內容。',
+            'scripts.running': '正在執行 {0}…',
+            'scripts.success': '「{0}」執行完成。',
+            'scripts.failed': '「{0}」執行失敗。',
+            'scripts.aborted': '「{0}」已中止。',
+            'scripts.start_failed': '無法啟動指令碼執行緒。',
+            'scripts.no_items': '沒有可選擇的項目',
+            'scripts.toggle': '切換',
+            'scripts.log_title': '指令碼日誌',
+            'scripts.scroll_logs': '捲動日誌',
+            'scripts.close': '關閉',
+            'scripts.waiting': '等待你的回覆…',
+            'scripts.working': '處理中…',
+            'scripts.log_empty': '指令碼尚未輸出任何內容。',
+            'scripts.exit_code': '結束代碼 {0}',
+          }
+
+          tw3ds = {
+            'settings.title': '設定',
+            'settings.general.title': '一般',
+            'settings.general.blurb': '遊戲卡匣掃描、系統儲存資料、Wi-Fi 傳輸與還原確認。\n變更會直接寫入 SD 卡上的 config.json。',
+            'settings.library.title': '資料庫',
+            'settings.library.blurb': '管理收藏與隱藏的遊戲。',
+            'settings.folders.title': '資料夾',
+            'settings.folders.blurb': '為各遊戲設定 SD 卡上的額外儲存資料與 Extdata 資料夾。',
+            'settings.network.title': '網路',
+            'settings.network.blurb': 'FTP 伺服器、Wi-Fi 傳輸狀態與本機網路位址。',
+            'settings.about.title': '關於',
+            'settings.about.blurb': '版本、製作人員與儲存空間使用量。',
+            'settings.general.light_theme': '淺色主題',
+            'settings.general.light_theme.sub': '使用淺色配色',
+            'settings.general.scan_cart': '掃描遊戲卡匣',
+            'settings.general.scan_cart.sub': '啟動時偵測已插入的遊戲卡匣',
+            'settings.general.nand_saves': '顯示系統（NAND）儲存資料',
+            'settings.general.nand_saves.sub': '包含系統軟體',
+            'settings.general.dsiware_saves': '顯示 DSiWare 儲存資料',
+            'settings.general.dsiware_saves.sub': '包含 NAND 中的 DSiWare 軟體',
+            'settings.general.transfer': '啟用 Wi-Fi 傳輸',
+            'settings.general.transfer.sub': '透過網路傳送／接收備份',
+            'settings.general.confirm_restore': '還原前先確認',
+            'settings.general.confirm_restore.sub': '覆寫現有儲存資料前先詢問',
+            'settings.general.quick_backup': '略過備份名稱輸入',
+            'settings.general.quick_backup.sub': '使用時間戳記命名，不開啟鍵盤',
+            'settings.general.language': '語言',
+            'settings.general.language.sub': '介面語言',
+            'settings.network.ftp': 'FTP 伺服器',
+            'settings.network.ftp.sub': '透過 FTP 存取 SD 卡（連接埠 50000）',
+            'settings.network.receive_pin': '接收 PIN',
+            'settings.network.receive_pin.sub': '接收傳輸時使用的固定 PIN',
+            'settings.network.receive_pin.random': '隨機',
+            'settings.network.receive_pin.prompt': '4 位數 PIN（0 = 每次隨機）',
+            'settings.network.ftp_address': 'FTP 位址',
+            'settings.network.transfer': 'Wi-Fi 傳輸',
+            'settings.network.memory_logs': '記憶體內日誌',
+            'settings.network.file_logs': '完整日誌',
+            'settings.about.author': '作者',
+            'settings.about.license': '授權',
+            'settings.about.sd_card': 'SD 卡',
+            'settings.about.sd_usage': '{1} 中已使用 {0}',
+            'settings.library.empty.title': '沒有收藏或隱藏的遊戲',
+            'settings.library.empty.body': '將遊戲加入收藏，或從遊戲庫中隱藏。',
+            'settings.folders.empty.title': '沒有額外的資料夾',
+            'settings.folders.empty.body': '為遊戲新增 SD 卡上的儲存資料或 Extdata 資料夾。',
+            'settings.hint.back_sections': '返回分類',
+            'settings.hint.section': '分類',
+            'hint.move': '移動', 'hint.toggle': '切換', 'hint.back': '返回', 'hint.edit': '編輯',
+            'hint.confirm': '確認', 'hint.delete': '刪除', 'hint.remove': '移除', 'hint.hide': '+隱藏',
+            'hint.add_save': '+儲存資料', 'hint.add_extdata': '+Extdata', 'hint.add_favorite': '+收藏', 'hint.add_fav': '+收藏',
+            'common.enabled': '已啟用', 'common.disabled': '已停用', 'common.saved': '已儲存',
+            'outcome.open_archive': '無法開啟儲存資料封存。',
+            'outcome.delete_dst': '無法遞迴刪除現有備份資料夾。',
+            'outcome.create_dst': '無法建立目的資料夾。',
+            'outcome.backup_failed': '無法備份 {0}。',
+            'outcome.path_too_long': '路徑超出主機限制。\n請使用較短的備份資料夾名稱。',
+            'outcome.card_nand_save': '此遊戲卡匣將儲存資料存放在卡匣內的 NAND。\n3DS 無法存取。\n請在 DS 模式下使用 GodMode9i。',
+            'outcome.read_file': '無法讀取儲存資料備份檔案。',
+            'outcome.commit': '無法寫入儲存資料。',
+            'outcome.secure_value': '無法修正 Secure Value。',
+            'outcome.gba_no_save': '尚未建立 GBA 儲存資料。\n請先啟動遊戲並儲存一次，再重試。',
+            'outcome.gba_size_mismatch': '備份的儲存資料大小與此遊戲的儲存類型不相符。',
+            'outcome.gba_bad_backup': '此備份不是有效的 GBA 儲存資料檔案。',
+            'outcome.restore_failed': '無法還原 {0}。',
+            'outcome.backup_success': '已成功將進度備份至儲存裝置。',
+            'outcome.restore_success': '{0}\n已成功還原。',
+            'main.tab_save': '儲存資料', 'main.tab_extdata': 'Extdata',
+            'main.backup': '備份', 'main.restore': '還原', 'main.backup_short': '備份', 'main.restore_short': '還原',
+            'main.backup_selected': '備份所選遊戲',
+            'main.backup_n_selected': '備份所選的 {0} 個項目',
+            'main.loading': '正在載入遊戲… {0}%',
+            'main.selected_badge': '已選擇 {0} 個',
+            'main.titles_count': '{0} 個遊戲',
+            'main.favorite': '收藏', 'main.backups': '備份', 'main.no_backups': '沒有備份',
+            'main.backups_meta': '已儲存 {0} 個 · {1}', 'main.backups_meta_pending': '已儲存 {0} 個 · …',
+            'main.in_progress': '{0} 進行中…',
+            'main.save_n': '儲存資料 {0} / {1}',
+            'main.system_title': '系統軟體',
+            'main.from_current_save': '從目前的儲存資料',
+            'main.from_current_extdata': '從目前的 Extdata',
+            'main.from_wireless': '從其他裝置',
+            'main.confirm_backup_title': '要備份所選遊戲嗎？',
+            'main.select_backup_send': '請選擇要傳送的備份。',
+            'main.receiver_ip_port': '接收端 IP:連接埠',
+            'main.pin_prompt': 'PIN（4 位數）',
+            'main.clear_selection': '取消選擇',
+            'main.hint.go_saves': '管理此遊戲的儲存資料',
+            'common.cancel': '取消', 'common.error': '錯誤',
+            'overlay.select': '選擇', 'overlay.open': '開啟',
+            'transfer.receiver_active': '等待接收中',
+            'media.sd_card': 'SD 卡', 'media.cartridge': '遊戲卡匣',
+            'scripts.empty': '在 /3ds/Checkpoint/scripts 資料夾中找不到指令碼',
+          }
+
+          twswitch = {
+            'settings.title': '設定',
+            'settings.saved_to': '設定檔已儲存至',
+            'settings.cat.general': '一般', 'settings.cat.library': '資料庫',
+            'settings.cat.save_folders': '儲存資料夾', 'settings.cat.connectivity': '連線',
+            'settings.cat.logs': '日誌', 'settings.cat.about': '關於',
+            'settings.section.appearance': '外觀', 'settings.section.safety': '安全',
+            'settings.section.connectivity': '連線', 'settings.section.logs': '日誌',
+            'settings.section.favorites': '收藏的遊戲', 'settings.section.hidden': '隱藏的遊戲',
+            'settings.section.user_folders': '使用者儲存資料夾',
+            'settings.section.device_folders': '裝置儲存資料夾',
+            'settings.section.about': '關於', 'settings.section.credits': '製作人員',
+            'settings.general.theme': '主題', 'settings.general.theme.sub': '立即套用',
+            'settings.theme.dark': '深色', 'settings.theme.light': '淺色',
+            'settings.general.language': '語言', 'settings.general.language.sub': '介面語言',
+            'settings.general.sort': '預設排序',
+            'settings.general.sort.sub': '啟動時的遊戲列表排序方式',
+            'settings.general.confirm_restore': '還原前先確認',
+            'settings.general.confirm_restore.sub': '還原時覆寫現有儲存資料前先詢問',
+            'settings.general.quick_backup': '略過備份名稱輸入',
+            'settings.general.quick_backup.sub': '使用時間戳記命名，不開啟鍵盤',
+            'settings.general.verify_restore': '還原後驗證',
+            'settings.general.verify_restore.sub': '確認還原後的資料與備份相符；大型儲存資料會需要較長時間',
+            'settings.conn.ftp': 'FTP 伺服器',
+            'settings.conn.ftp.sub': '從電腦瀏覽備份',
+            'settings.conn.receive_pin': '接收 PIN',
+            'settings.conn.receive_pin.sub': '接收傳輸時使用的固定 PIN',
+            'settings.conn.receive_pin.random': '隨機',
+            'settings.conn.receive_pin.prompt': '4 位數 PIN（0 = 每次隨機）',
+            'settings.conn.running': '· 執行中',
+            'settings.conn.running_on': '· 執行於 {0}:50000',
+            'settings.conn.log_server': '日誌伺服器',
+            'settings.conn.full_log': '完整日誌檔案',
+            'settings.library.unfavorite': '取消收藏', 'settings.library.add_favorite': '新增收藏',
+            'settings.library.add_favorite.sub': '將遊戲固定在列表頂端',
+            'settings.library.unhide': '取消隱藏', 'settings.library.hide_title': '隱藏遊戲',
+            'settings.library.hide_title.sub': '從列表中隱藏遊戲',
+            'settings.pill.add': '+ 新增', 'settings.pill.remove': '移除',
+            'settings.folders.add_save': '新增儲存資料夾',
+            'settings.folders.add_save.sub': '選擇遊戲，再指定額外的儲存資料夾',
+            'settings.folders.add_device': '新增裝置儲存資料夾',
+            'settings.folders.add_device.sub': '選擇遊戲，再指定額外的裝置儲存資料夾',
+            'settings.folders.choose_title': '選擇遊戲',
+            'settings.folders.choose_folder': '選擇儲存資料夾',
+            'settings.about.version': '版本', 'settings.about.author': '作者', 'settings.about.source': '原始碼',
+            'settings.logs.empty': '尚無日誌。',
+            'hint.open': '開啟', 'hint.back': '返回', 'hint.scroll': '捲動', 'hint.categories': '類別',
+            'hint.change': '變更', 'hint.select': '選擇', 'hint.sort': '排序', 'hint.multiselect': '多選',
+            'hint.settings': '設定', 'hint.menu': '選單', 'hint.confirm': '確認',
+            'common.yes': '是', 'common.no': '否', 'common.cancel': '取消', 'common.error': '錯誤',
+            'overlay.choose': '選擇', 'overlay.open': '開啟',
+            'outcome.mount': '無法掛載儲存資料。',
+            'outcome.delete_dst': '無法遞迴刪除現有備份資料夾。',
+            'outcome.create_dst': '無法建立目的資料夾。',
+            'outcome.backup_failed': '無法備份儲存資料。',
+            'outcome.delete_save': '無法刪除儲存資料。',
+            'outcome.commit': '無法將儲存資料寫入儲存裝置。',
+            'outcome.restore_failed': '無法還原儲存資料。',
+            'outcome.verify_failed': '還原後的儲存資料與備份不相符，請檢視日誌。',
+            'main.backup': '備份', 'main.restore': '還原',
+            'main.play_time': '遊玩時間',
+            'main.backups_count': '備份 · {0}',
+            'main.backup_n_title': '備份 {0} 個遊戲', 'main.backup_n_titles': '備份 {0} 個遊戲',
+            'main.in_progress': '{0} 進行中…', 'main.to_cancel': '取消',
+            'main.save_n': '儲存資料 {0} / {1}',
+            'main.backup_cancelled': '已取消備份。',
+            'main.backup_success': '已成功將進度備份至儲存裝置。',
+            'main.backup_success_fallback': '已成功將進度備份至儲存裝置。\n無法開啟系統鍵盤，因此改用建議的目的資料夾名稱。',
+            'main.restore_success': '{0}\n已成功還原。',
+            'savekind.empty.user': '沒有儲存資料',
+            'savekind.empty.bcat': '沒有 BCAT 儲存資料',
+            'savekind.empty.device': '沒有裝置儲存資料',
+            'savekind.empty.system': '沒有系統儲存資料',
+            'sort.alpha': 'A-Z', 'sort.last_played': '最近遊玩', 'sort.most_backups': '備份數量最多', 'sort.favorites_first': '收藏優先',
+            'settings.conn.transfer': 'Wi-Fi 傳輸',
+            'settings.conn.transfer.sub': '透過網路傳送／接收備份',
+            'scripts.empty': '在 /switch/Checkpoint/scripts 資料夾中找不到指令碼',
+            'scripts.view_log': '檢視日誌', 'scripts.back_to_dialog': '返回對話方塊',
+          }
+
+          def apply(path, overrides):
+              data = json.loads(path.read_text(encoding='utf-8'))
+              merged = dict(common)
+              merged.update(overrides)
+              unknown = [k for k in merged if k not in data]
+              # Common dictionary intentionally spans both platforms; only apply keys that exist.
+              for key, value in merged.items():
+                  if key in data and isinstance(data[key], dict) and 'en' in data[key]:
+                      data[key]['zh-TW'] = value
+              path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+              return data
+
+          files = [
+              (Path('3ds/assets/romfs/i18n.json'), tw3ds),
+              (Path('switch/romfs/i18n.json'), twswitch),
+          ]
+          placeholder = re.compile(r'\{\d+\}')
+          banned = ['擴充套件', '校驗', '已禁用', '無響應', '新建備份', '當前存檔', '選中的', '軟體包解壓', 'TF卡']
+
+          for path, overrides in files:
+              data = apply(path, overrides)
+              missing = []
+              bad_params = []
+              bad_words = []
+              for key, langs in data.items():
+                  if not isinstance(langs, dict) or 'en' not in langs:
+                      continue
+                  if 'zh-TW' not in langs:
+                      missing.append(key)
+                      continue
+                  en_params = sorted(placeholder.findall(langs['en']))
+                  tw_params = sorted(placeholder.findall(langs['zh-TW']))
+                  if en_params != tw_params:
+                      bad_params.append((key, en_params, tw_params))
+                  for word in banned:
+                      if word in langs['zh-TW']:
+                          bad_words.append((key, word, langs['zh-TW']))
+              if missing or bad_params or bad_words:
+                  raise SystemExit(f'{path}: missing={missing}, placeholders={bad_params}, banned={bad_words}')
+              print(f'{path}: {len(data)} keys validated; all EN entries have zh-TW')
+          PY
+
+      - name: Validate JSON
+        run: |
+          python3 -m json.tool 3ds/assets/romfs/i18n.json >/dev/null
+          python3 -m json.tool switch/romfs/i18n.json >/dev/null
+
+      - name: Commit proofread localization
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add 3ds/assets/romfs/i18n.json switch/romfs/i18n.json
+          git rm .github/workflows/audit-zh-tw.yml .github/workflows/proofread-zh-tw.yml
+          git commit -m "Polish Traditional Chinese localization"
+          git push
