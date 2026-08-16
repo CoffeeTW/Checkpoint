@@ -25,6 +25,7 @@
  */
 
 #include "textpool.hpp"
+#include "configuration.hpp"
 #include "logging.hpp"
 #include "util.hpp"
 #include <algorithm>
@@ -74,6 +75,9 @@ TextPool::TextPool(void)
 TextPool::~TextPool(void)
 {
     C2D_TextBufDelete(mBuf);
+    if (mUiFont != nullptr) {
+        C2D_FontFree(mUiFont);
+    }
     if (mMono != nullptr) {
         C2D_FontFree(mMono);
     }
@@ -83,21 +87,56 @@ void TextPool::rebuild(void)
 {
     C2D_TextBufClear(mBuf); // invalidates every cached C2D_Text with it
     mCache.clear();
+    mUiCache.clear();
     mMonoCache.clear();
 }
 
 void TextPool::frameTick(void)
 {
-    if (++mFrame % TICK_INTERVAL == 0 && mCache.size() + mMonoCache.size() > MAX_ENTRIES) {
+    if (++mFrame % TICK_INTERVAL == 0 && mCache.size() + mUiCache.size() + mMonoCache.size() > MAX_ENTRIES) {
         rebuild();
     }
 }
 
+C2D_Font TextPool::uiFont(void)
+{
+    const std::string language = Configuration::getInstance().language();
+    if (language == mUiLanguage) {
+        return mUiFont;
+    }
+
+    // Parsed C2D_Text objects retain glyph references from their font, so clear
+    // them before changing/freeing the regional face.
+    rebuild();
+    if (mUiFont != nullptr) {
+        C2D_FontFree(mUiFont);
+        mUiFont = nullptr;
+    }
+
+    mUiLanguage = language;
+    if (language == "zh-TW") {
+        // On a TWN console Citro2D returns nullptr intentionally because the
+        // native shared font is already the requested face. On other regions it
+        // loads cbf_zh-Hant-TW from the shared-font title when available.
+        mUiFont = C2D_FontLoadSystem(CFG_REGION_TWN);
+    }
+    else if (language == "zh") {
+        // Same behaviour for Simplified Chinese / mainland China.
+        mUiFont = C2D_FontLoadSystem(CFG_REGION_CHN);
+    }
+
+    return mUiFont;
+}
+
 const C2D_Text* TextPool::obtain(const std::string& s, C2D_Font font)
 {
-    auto& cache = font != nullptr ? mMonoCache : mCache;
-    auto it     = cache.find(s);
-    if (it != cache.end()) {
+    auto* cache = &mCache;
+    if (font != nullptr) {
+        cache = font == mMono ? &mMonoCache : &mUiCache;
+    }
+
+    auto it = cache->find(s);
+    if (it != cache->end()) {
         return &it->second;
     }
     // s.size() over-estimates the glyph count for multi-byte UTF-8, which only
@@ -108,7 +147,21 @@ const C2D_Text* TextPool::obtain(const std::string& s, C2D_Font font)
     C2D_Text t;
     C2D_TextFontParse(&t, font, mBuf, s.c_str());
     C2D_TextOptimize(&t);
-    return &cache.emplace(s, t).first->second;
+    return &cache->emplace(s, t).first->second;
+}
+
+float TextPool::measureWidth(const std::string& s, float scale)
+{
+    const C2D_Text* t = obtain(s, uiFont());
+    return StringUtils::textWidth(*t, scale);
+}
+
+float TextPool::measureHeight(const std::string& s, float scale)
+{
+    const C2D_Text* t = obtain(s, uiFont());
+    float width = 0.0f, height = 0.0f;
+    C2D_TextGetDimensions(t, scale, scale, &width, &height);
+    return height;
 }
 
 bool TextPool::monoReady(void)
@@ -147,12 +200,12 @@ bool TextPool::monoReady(void)
 
 float TextPool::monoAdvance(float scale)
 {
-    return monoReady() ? mMonoAdvance * scale : StringUtils::textWidth("0", scale);
+    return monoReady() ? mMonoAdvance * scale : measureWidth("0", scale);
 }
 
 float TextPool::monoLineHeight(float scale)
 {
-    return monoReady() ? mMonoHeight * scale : StringUtils::textHeight("0", scale);
+    return monoReady() ? mMonoHeight * scale : measureHeight("0", scale);
 }
 
 void TextPool::drawMono(const std::string& s, float x, float y, float scale, u32 color, float depth)
@@ -168,8 +221,8 @@ void TextPool::drawMono(const std::string& s, float x, float y, float scale, u32
 
 float TextPool::draw(const std::string& s, float x, float y, float scale, u32 color, float depth)
 {
-    const C2D_Text* t = obtain(s, nullptr);
-    // Snap the pen to whole pixels: the system font is a bitmap atlas, so
+    const C2D_Text* t = obtain(s, uiFont());
+    // Snap the pen to whole pixels: system fonts are bitmap atlases, so
     // fractional origins smear glyph edges across two texels and read as blurry.
     C2D_DrawText(t, C2D_WithColor, floorf(x + 0.5f), floorf(y + 0.5f), depth, scale, scale, color);
     return StringUtils::textWidth(*t, scale);
@@ -177,39 +230,38 @@ float TextPool::draw(const std::string& s, float x, float y, float scale, u32 co
 
 void TextPool::drawCentered(const std::string& s, float x, float w, float y, float scale, u32 color, float depth)
 {
-    // truncate() returns `s` unchanged when it already fits, so the common
-    // case costs one cached width measure.
-    const C2D_Text* t = obtain(truncate(s, w, scale), nullptr);
-    const float cx    = x + (w - StringUtils::textWidth(*t, scale)) / 2;
+    const std::string fitted = truncate(s, w, scale);
+    const C2D_Text* t        = obtain(fitted, uiFont());
+    const float cx           = x + (w - StringUtils::textWidth(*t, scale)) / 2;
     C2D_DrawText(t, C2D_WithColor, floorf(cx + 0.5f), floorf(y + 0.5f), depth, scale, scale, color);
 }
 
 void TextPool::drawWrapped(const std::string& s, float x, float y, float scale, u32 color, float maxWidth, float depth, u32 alignFlags)
 {
-    const C2D_Text* t = obtain(s, nullptr);
+    const C2D_Text* t = obtain(s, uiFont());
     C2D_DrawText(t, C2D_WithColor | C2D_WordWrap | alignFlags, x, y, depth, scale, scale, color, maxWidth);
 }
 
-float TextPool::width(const std::string& s, float scale) const
+float TextPool::width(const std::string& s, float scale)
 {
-    return StringUtils::textWidth(s, scale);
+    return measureWidth(s, scale);
 }
 
-float TextPool::fitScale(const std::string& s, float maxWidth, float scale, float minScale) const
+float TextPool::fitScale(const std::string& s, float maxWidth, float scale, float minScale)
 {
-    const float w = StringUtils::textWidth(s, scale);
+    const float w = measureWidth(s, scale);
     if (w <= maxWidth || w <= 0.0f) {
         return scale;
     }
     return std::max(scale * maxWidth / w, minScale);
 }
 
-std::string TextPool::truncate(const std::string& s, float maxWidth, float scale) const
+std::string TextPool::truncate(const std::string& s, float maxWidth, float scale)
 {
-    if (StringUtils::textWidth(s, scale) <= maxWidth) {
+    if (measureWidth(s, scale) <= maxWidth) {
         return s;
     }
-    const float ellipsisWidth = StringUtils::textWidth("...", scale);
+    const float ellipsisWidth = measureWidth("...", scale);
 
     // Codepoint start offsets, so the cut never splits a UTF-8 sequence.
     std::vector<size_t> starts;
@@ -222,7 +274,7 @@ std::string TextPool::truncate(const std::string& s, float maxWidth, float scale
     while (lo < hi) {
         const size_t mid = (lo + hi + 1) / 2;
         const size_t end = mid < starts.size() ? starts[mid] : s.size();
-        if (StringUtils::textWidth(s.substr(0, end), scale) + ellipsisWidth <= maxWidth) {
+        if (measureWidth(s.substr(0, end), scale) + ellipsisWidth <= maxWidth) {
             lo = mid;
         }
         else {
