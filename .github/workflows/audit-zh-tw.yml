@@ -1,0 +1,50 @@
+name: Audit Traditional Chinese localization
+
+on:
+  push:
+    branches:
+      - agent/traditional-chinese
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit zh-TW coverage and wording
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          files = [
+              Path('3ds/assets/romfs/i18n.json'),
+              Path('switch/romfs/i18n.json'),
+          ]
+          suspect = [
+              '通用','目錄','存檔','擴充套件','檢測','禁用','訪問','響應','專案',
+              '軟體包','解壓','校驗','新建','當前','選中','覆蓋','彈出','時間戳',
+              '製作名單','使用情況','無需','項','卡匣掃描','讀取目錄','许可证',
+          ]
+          for path in files:
+              data = json.loads(path.read_text(encoding='utf-8'))
+              missing = []
+              flagged = []
+              for key, langs in data.items():
+                  if not isinstance(langs, dict) or 'en' not in langs:
+                      continue
+                  if 'zh-TW' not in langs:
+                      missing.append((key, langs['en']))
+                  else:
+                      tw = langs['zh-TW']
+                      hits = [w for w in suspect if w in tw]
+                      if hits:
+                          flagged.append((key, langs['en'], tw, ','.join(hits)))
+              print(f'=== {path} ===')
+              print(f'keys={len(data)} missing_zh_TW={len(missing)} flagged={len(flagged)}')
+              print('--- MISSING ---')
+              for key, en in missing:
+                  print(f'{key}\t{en}')
+              print('--- FLAGGED ---')
+              for key, en, tw, hits in flagged:
+                  print(f'{key}\t{en}\t{tw}\t[{hits}]')
+          PY
