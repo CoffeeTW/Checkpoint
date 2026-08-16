@@ -9,6 +9,7 @@
     "nl": "Instellingen",
     "ja": "設定",
     "zh": "设置",
+    "zh-TW": "設定",
     "ru": "Настройки"
   },
   "settings.general.title": {
@@ -21,6 +22,7 @@
     "nl": "Algemeen",
     "ja": "一般",
     "zh": "通用",
+    "zh-TW": "通用",
     "ru": "Основные"
   },
   "settings.general.blurb": {
@@ -33,6 +35,7 @@
     "nl": "Cartridgescan, systeemsaves, wifi-overdracht en herstelbevestiging. Wijzigingen worden direct naar config.json op je SD-kaart geschreven.",
     "ja": "カートリッジのスキャン、システムセーブ、\nWi-Fi転送、リストア確認。変更は\nSDカードのconfig.json\nに直接書き込まれます。",
     "zh": "卡带扫描、系统存档、Wi-Fi 传输以及恢复确认\n所做的更改将直接写入到 SD 卡中的 config.json 文件",
+    "zh-TW": "卡匣掃描、系統存檔、Wi-Fi 傳輸以及還原確認\n所做的更改將直接寫入到 SD 卡中的 config.json 檔案",
     "ru": "Сканирование картриджей, системные сохранения, передача по Wi-Fi и подтверждение восстановления. Изменения записываются прямо в config.json на карте памяти."
   },
   "settings.library.title": {
@@ -45,6 +48,7 @@
     "nl": "Bibliotheek",
     "ja": "ライブラリ",
     "zh": "资料库",
+    "zh-TW": "資料庫",
     "ru": "Библиотека"
   },
   "settings.library.blurb": {
@@ -57,6 +61,7 @@
     "nl": "Favorieten en verborgen titels - de filter- en favorietenlijsten.",
     "ja": "お気に入りと非表示タイトル - フィルターとお気に入りリスト。",
     "zh": "查看和管理已收藏或已隐藏的游戏",
+    "zh-TW": "檢視和管理已收藏或已隱藏的遊戲",
     "ru": "Избранное и скрытые тайтлы - фильтр и список избранного."
   },
   "settings.folders.title": {
@@ -69,6 +74,7 @@
     "nl": "Mappen",
     "ja": "フォルダ",
     "zh": "目录",
+    "zh-TW": "目錄",
     "ru": "Папки"
   },
   "settings.folders.blurb": {
@@ -81,6 +87,7 @@
     "nl": "Extra save- en extdata-mappen per titel op je SD-kaart.",
     "ja": "SDカード上のタイトルごとの追加セーブ・\n拡張データフォルダ。",
     "zh": "为每款游戏添加额外的存档和扩展数据读取目录\n（这些目录中的存档和扩展数据也会被本软件读取并显示）",
+    "zh-TW": "為每款遊戲新增額外的存檔和擴充套件資料讀取目錄\n（這些目錄中的存檔和擴充套件資料也會被本軟體讀取並顯示）",
     "ru": "Дополнительные папки сохранений и extdata для выбранных тайтлов на карте памяти."
   },
   "settings.network.title": {
@@ -93,6 +100,7 @@
     "nl": "Netwerk",
     "ja": "ネットワーク",
     "zh": "网络",
+    "zh-TW": "網路",
     "ru": "Сеть"
   },
   "settings.network.blurb": {
@@ -105,6 +113,7 @@
     "nl": "FTP-server, wifi-overdrachtsstatus en de netwerkadressen van deze console.",
     "ja": "FTPサーバー、Wi-Fi転送の状態、\n本機のネットワークアドレス。",
     "zh": "FTP 服务器、Wi-Fi 传输状态和本机的 IP 地址",
+    "zh-TW": "FTP 伺服器、Wi-Fi 傳輸狀態和本機的 IP 地址",
     "ru": "FTP-сервер, статус передачи по Wi-Fi и сетевой адрес консоли."
   },
   "settings.about.title": {
@@ -117,6 +126,7 @@
     "nl": "Over",
     "ja": "情報",
     "zh": "关于",
+    "zh-TW": "關於",
     "ru": "О программе"
   },
   "settings.about.blurb": {
@@ -129,6 +139,7 @@
     "nl": "Versie, credits en opslaggebruik.",
     "ja": "バージョン、クレジット、ストレージ使用量。",
     "zh": "版本、制作名单与存储使用情况",
+    "zh-TW": "版本、製作名單與儲存使用情況",
     "ru": "Версия, разработчики и использование памяти."
   },
   "settings.general.light_theme": {
@@ -141,6 +152,7 @@
     "nl": "Licht thema",
     "ja": "ライトテーマ",
     "zh": "浅色主题",
+    "zh-TW": "淺色主題",
     "ru": "Светлая тема"
   },
   "settings.general.light_theme.sub": {
@@ -153,6 +165,7 @@
     "nl": "Gebruik het lichte kleurenpalet",
     "ja": "明るい配色を使用",
     "zh": "使用浅色配色方案",
+    "zh-TW": "使用淺色配色方案",
     "ru": "Использовать светлую цветовую палитру"
   },
   "settings.general.scan_cart": {
@@ -165,6 +178,7 @@
     "nl": "Scan gamecartridge",
     "ja": "ゲームカートリッジをスキャン",
     "zh": "扫描游戏卡带",
+    "zh-TW": "掃描遊戲卡匣",
     "ru": "Сканирование картриджей"
   },
   "settings.general.scan_cart.sub": {
@@ -177,6 +191,7 @@
     "nl": "Detecteer de geplaatste cartridge bij het opstarten",
     "ja": "起動時に挿入されたカートを検出",
     "zh": "启动软件时检测已插入的卡带",
+    "zh-TW": "啟動軟體時檢測已插入的卡匣",
     "ru": "Определять вставленный картридж при запуске"
   },
   "settings.general.nand_saves": {
@@ -189,6 +204,7 @@
     "nl": "Systeemsaves (NAND) tonen",
     "ja": "システム(NAND)セーブを表示",
     "zh": "显示系统（NAND）存档",
+    "zh-TW": "顯示系統（NAND）存檔",
     "ru": "Отображать системные (NAND) сохранения"
   },
   "settings.general.nand_saves.sub": {
@@ -201,6 +217,7 @@
     "nl": "Systeemtitels opnemen",
     "ja": "システムタイトルを含める",
     "zh": "包含系统程序",
+    "zh-TW": "包含系統程式",
     "ru": "Включить в список системные сохранения"
   },
   "settings.general.dsiware_saves": {
@@ -213,6 +230,7 @@
     "nl": "DSiWare-saves tonen",
     "ja": "DSiWareセーブを表示",
     "zh": "显示 DSiWare 存档",
+    "zh-TW": "顯示 DSiWare 存檔",
     "ru": "Отображать DSiWare сохранения"
   },
   "settings.general.dsiware_saves.sub": {
@@ -225,6 +243,7 @@
     "nl": "DSiWare-titels van NAND opnemen",
     "ja": "NAND内のDSiWareタイトルを含める",
     "zh": "包含 NAND 中的 DSiWare 软件",
+    "zh-TW": "包含 NAND 中的 DSiWare 軟體",
     "ru": "Включить в список DSiWare тайтлы из NAND"
   },
   "settings.general.transfer": {
@@ -237,6 +256,7 @@
     "nl": "Wifi-overdracht inschakelen",
     "ja": "Wi-Fi転送を有効化",
     "zh": "启用 Wi-Fi 传输",
+    "zh-TW": "啟用 Wi-Fi 傳輸",
     "ru": "Включить передачу по Wi-Fi"
   },
   "settings.general.transfer.sub": {
@@ -249,6 +269,7 @@
     "nl": "Back-ups verzenden/ontvangen via het netwerk",
     "ja": "ネットワーク経由でバックアップを送受信",
     "zh": "通过网络发送 / 接收存档备份",
+    "zh-TW": "透過網路傳送 / 接收存檔備份",
     "ru": "Отправить / получить бэкапы через сеть"
   },
   "settings.general.confirm_restore": {
@@ -261,6 +282,7 @@
     "nl": "Bevestigen vóór herstellen",
     "ja": "リストア前に確認",
     "zh": "恢复存档前先确认",
+    "zh-TW": "還原存檔前先確認",
     "ru": "Подтвердить перед восстановлением"
   },
   "settings.general.confirm_restore.sub": {
@@ -273,6 +295,7 @@
     "nl": "Vragen voordat een save wordt overschreven",
     "ja": "セーブを上書きする前に確認する",
     "zh": "在覆盖现有存档前弹出提示",
+    "zh-TW": "在覆蓋現有存檔前彈出提示",
     "ru": "Спрашивать перед перезаписью сохранения"
   },
   "settings.general.quick_backup": {
@@ -285,6 +308,7 @@
     "nl": "Naam voor back-up overslaan",
     "ja": "バックアップ名の入力を省略",
     "zh": "备份存档时，跳过输入存档的名称",
+    "zh-TW": "備份存檔時，跳過輸入存檔的名稱",
     "ru": "Пропустить ввод имени бэкапа"
   },
   "settings.general.quick_backup.sub": {
@@ -297,6 +321,7 @@
     "nl": "Gebruik de tijdstempel, geen toetsenbord",
     "ja": "キーボードを使わずタイムスタンプを使用",
     "zh": "使用时间戳命名存档备份，无需输入名称",
+    "zh-TW": "使用時間戳命名存檔備份，無需輸入名稱",
     "ru": "Использовать дату и время, не отображать клавиатуру"
   },
   "settings.general.language": {
@@ -309,6 +334,7 @@
     "nl": "Taal",
     "ja": "言語",
     "zh": "语言",
+    "zh-TW": "語言",
     "ru": "Язык"
   },
   "settings.general.language.sub": {
@@ -321,6 +347,7 @@
     "nl": "Taal van de interface",
     "ja": "UIの言語",
     "zh": "界面语言",
+    "zh-TW": "介面語言",
     "ru": "Язык интерфейса"
   },
   "settings.network.ftp": {
@@ -333,6 +360,7 @@
     "nl": "FTP-server",
     "ja": "FTPサーバー",
     "zh": "FTP 服务器",
+    "zh-TW": "FTP 伺服器",
     "ru": "FTP-сервер"
   },
   "settings.network.ftp.sub": {
@@ -345,6 +373,7 @@
     "nl": "Deel de SD-kaart via FTP (poort 50000)",
     "ja": "SDカードをFTPで共有(ポート50000)",
     "zh": "通过 FTP 服务器访问 SD 卡的内容（端口 50000）",
+    "zh-TW": "透過 FTP 伺服器訪問 SD 卡的內容（埠 50000）",
     "ru": "Раздать карту памяти по FTP (порт 50000)"
   },
   "settings.network.receive_pin": {
@@ -357,6 +386,7 @@
     "nl": "Ontvangst-pincode",
     "ja": "受信PIN",
     "zh": "接收 PIN 码",
+    "zh-TW": "接收 PIN 碼",
     "ru": "PIN приёма"
   },
   "settings.network.receive_pin.sub": {
@@ -369,6 +399,7 @@
     "nl": "Vaste pincode voor inkomende overdrachten",
     "ja": "受信転送に使う固定PIN",
     "zh": "用于接收传输的固定 PIN 码",
+    "zh-TW": "用於接收傳輸的固定 PIN 碼",
     "ru": "Постоянный PIN для входящих передач"
   },
   "settings.network.receive_pin.random": {
@@ -381,6 +412,7 @@
     "nl": "Willekeurig",
     "ja": "ランダム",
     "zh": "随机",
+    "zh-TW": "隨機",
     "ru": "Случайный"
   },
   "settings.network.receive_pin.prompt": {
@@ -393,6 +425,7 @@
     "nl": "Pincode van 4 cijfers (0 = elke keer willekeurig)",
     "ja": "4桁のPIN(0 = 毎回ランダム)",
     "zh": "4 位 PIN 码（0 = 每次随机）",
+    "zh-TW": "4 位 PIN 碼（0 = 每次隨機）",
     "ru": "PIN из 4 цифр (0 = случайный каждый раз)"
   },
   "settings.network.ftp_address": {
@@ -405,6 +438,7 @@
     "nl": "FTP-adres",
     "ja": "FTPアドレス",
     "zh": "FTP 地址",
+    "zh-TW": "FTP 地址",
     "ru": "FTP адрес"
   },
   "settings.network.transfer": {
@@ -417,6 +451,7 @@
     "nl": "Wifi-overdracht",
     "ja": "Wi-Fi転送",
     "zh": "Wi-Fi 传输",
+    "zh-TW": "Wi-Fi 傳輸",
     "ru": "Передача по Wi-Fi"
   },
   "settings.network.memory_logs": {
@@ -429,6 +464,7 @@
     "nl": "Logs in geheugen",
     "ja": "メモリ内ログ",
     "zh": "内存日志",
+    "zh-TW": "記憶體日誌",
     "ru": "Логи в памяти"
   },
   "settings.network.file_logs": {
@@ -441,6 +477,7 @@
     "nl": "Volledige logs",
     "ja": "完全なログ",
     "zh": "完整日志",
+    "zh-TW": "完整日誌",
     "ru": "Полные логи"
   },
   "settings.about.author": {
@@ -453,6 +490,7 @@
     "nl": "Auteur",
     "ja": "作者",
     "zh": "作者",
+    "zh-TW": "作者",
     "ru": "Автор"
   },
   "settings.about.license": {
@@ -465,6 +503,7 @@
     "nl": "Licentie",
     "ja": "ライセンス",
     "zh": "许可证",
+    "zh-TW": "許可證",
     "ru": "Лицензия"
   },
   "settings.about.sd_card": {
@@ -477,6 +516,7 @@
     "nl": "SD-kaart",
     "ja": "SDカード",
     "zh": "SD 卡",
+    "zh-TW": "SD 卡",
     "ru": "SD-карта"
   },
   "settings.about.sd_usage": {
@@ -489,6 +529,7 @@
     "nl": "{0} gebruikt van {1}",
     "ja": "{1}中{0}使用",
     "zh": "{1}中已使用{0}",
+    "zh-TW": "{1}中已使用{0}",
     "ru": "Использовано {0} из {1}"
   },
   "settings.library.empty.title": {
@@ -501,6 +542,7 @@
     "nl": "Geen favorieten of verborgen titels",
     "ja": "お気に入りや非表示タイトルがありません",
     "zh": "没有收藏或隐藏的游戏",
+    "zh-TW": "沒有收藏或隱藏的遊戲",
     "ru": "Нет избранных или скрытых тайтлов"
   },
   "settings.library.empty.body": {
@@ -513,6 +555,7 @@
     "nl": "Markeer een titel als favoriet of verberg deze uit het bibliotheekraster.",
     "ja": "タイトルをお気に入りに追加するか、ライブラリグリッドから非表示にしてください。",
     "zh": "收藏或隐藏游戏库中的游戏",
+    "zh-TW": "收藏或隱藏遊戲庫中的遊戲",
     "ru": "Добавить тайтл в избранное или скрыть из сетки библиотеки."
   },
   "settings.folders.empty.title": {
@@ -525,6 +568,7 @@
     "nl": "Geen extra mappen",
     "ja": "追加フォルダがありません",
     "zh": "没有额外的目录",
+    "zh-TW": "沒有額外的目錄",
     "ru": "Нет дополнительных папок"
   },
   "settings.folders.empty.body": {
@@ -537,6 +581,7 @@
     "nl": "Voeg een extra save- of extdata-map per titel toe op je SD-kaart.",
     "ja": "SDカード上にタイトルごとのセーブまたは拡張データフォルダを追加してください。",
     "zh": "在你的 SD 卡中为一款游戏添加额外的存档和扩展数据读取目录",
+    "zh-TW": "在你的 SD 卡中為一款遊戲新增額外的存檔和擴充套件資料讀取目錄",
     "ru": "Добавить папку сохранений или extdata для выбранного тайтла на карте памяти."
   },
   "settings.hint.back_sections": {
@@ -549,6 +594,7 @@
     "nl": "Terug naar secties",
     "ja": "セクション一覧に戻る",
     "zh": "返回分类列表",
+    "zh-TW": "返回分類列表",
     "ru": "Вернуться к разделам"
   },
   "settings.hint.section": {
@@ -561,6 +607,7 @@
     "nl": "Sectie",
     "ja": "セクション",
     "zh": "分类",
+    "zh-TW": "分類",
     "ru": "Раздел"
   },
   "hint.move": {
@@ -573,6 +620,7 @@
     "nl": "Verplaatsen",
     "ja": "移動",
     "zh": "移动",
+    "zh-TW": "移動",
     "ru": "Переместить"
   },
   "hint.toggle": {
@@ -585,6 +633,7 @@
     "nl": "Wisselen",
     "ja": "切替",
     "zh": "切换",
+    "zh-TW": "切換",
     "ru": "Переключить"
   },
   "hint.back": {
@@ -597,6 +646,7 @@
     "nl": "Terug",
     "ja": "戻る",
     "zh": "返回",
+    "zh-TW": "返回",
     "ru": "Назад"
   },
   "hint.edit": {
@@ -609,6 +659,7 @@
     "nl": "Bewerken",
     "ja": "編集",
     "zh": "编辑",
+    "zh-TW": "編輯",
     "ru": "Изменить"
   },
   "hint.confirm": {
@@ -621,6 +672,7 @@
     "nl": "Bevestigen",
     "ja": "確定",
     "zh": "确认",
+    "zh-TW": "確認",
     "ru": "Подтвердить"
   },
   "hint.delete": {
@@ -633,6 +685,7 @@
     "nl": "Verwijderen",
     "ja": "削除",
     "zh": "删除",
+    "zh-TW": "刪除",
     "ru": "Удалить"
   },
   "hint.remove": {
@@ -645,6 +698,7 @@
     "nl": "Verwijderen",
     "ja": "削除",
     "zh": "移除",
+    "zh-TW": "移除",
     "ru": "Убрать"
   },
   "hint.hide": {
@@ -657,6 +711,7 @@
     "nl": "+Verberg",
     "ja": "+非表示",
     "zh": "+隐藏",
+    "zh-TW": "+隱藏",
     "ru": "+Скрыть"
   },
   "hint.add_save": {
@@ -669,6 +724,7 @@
     "nl": "+Opsl.",
     "ja": "+セーブ",
     "zh": "+存档",
+    "zh-TW": "+存檔",
     "ru": "+Сохранение"
   },
   "hint.add_extdata": {
@@ -681,6 +737,7 @@
     "nl": "+Extdata",
     "ja": "+拡張データ",
     "zh": "+扩展数据",
+    "zh-TW": "+擴充套件資料",
     "ru": "+Extdata"
   },
   "hint.add_favorite": {
@@ -693,6 +750,7 @@
     "nl": "+Favoriet",
     "ja": "+お気に入り",
     "zh": "+收藏",
+    "zh-TW": "+收藏",
     "ru": "+Избранное"
   },
   "hint.add_fav": {
@@ -705,6 +763,7 @@
     "nl": "+Fav.",
     "ja": "+お気に入り",
     "zh": "+收藏",
+    "zh-TW": "+收藏",
     "ru": "+Избр."
   },
   "common.enabled": {
@@ -717,6 +776,7 @@
     "nl": "Ingeschakeld",
     "ja": "有効",
     "zh": "已启用",
+    "zh-TW": "已啟用",
     "ru": "Включено"
   },
   "common.disabled": {
@@ -729,6 +789,7 @@
     "nl": "Uitgeschakeld",
     "ja": "無効",
     "zh": "已禁用",
+    "zh-TW": "已禁用",
     "ru": "Выключено"
   },
   "common.unavailable": {
@@ -741,6 +802,7 @@
     "nl": "Niet beschikbaar",
     "ja": "利用不可",
     "zh": "不可用",
+    "zh-TW": "不可用",
     "ru": "Недоступно"
   },
   "common.saved": {
@@ -753,6 +815,7 @@
     "nl": "Opgeslagen",
     "ja": "保存済み",
     "zh": "已保存",
+    "zh-TW": "已儲存",
     "ru": "Сохранено"
   },
   "outcome.open_archive": {
@@ -765,6 +828,7 @@
     "nl": "Kon save-archief niet openen.",
     "ja": "セーブアーカイブを開けませんでした。",
     "zh": "存档打开失败",
+    "zh-TW": "存檔開啟失敗",
     "ru": "Не удалось открыть архив сохранения."
   },
   "outcome.delete_dst": {
@@ -777,6 +841,7 @@
     "nl": "Kon de bestaande back-upmap niet recursief verwijderen.",
     "ja": "既存のバックアップフォルダを再帰的に削除できませんでした。",
     "zh": "无法删除现有备份目录与其所包含的全部文件",
+    "zh-TW": "無法刪除現有備份目錄與其所包含的全部檔案",
     "ru": "Не удалось рекурсивно удалить папку\nсуществующего бэкапа."
   },
   "outcome.create_dst": {
@@ -789,6 +854,7 @@
     "nl": "Kon doelmap niet aanmaken.",
     "ja": "出力先フォルダを作成できませんでした。",
     "zh": "无法创建目标目录",
+    "zh-TW": "無法建立目標目錄",
     "ru": "Не удалось создать папку назначения."
   },
   "outcome.backup_failed": {
@@ -801,6 +867,7 @@
     "nl": "Back-up van {0} mislukt.",
     "ja": "{0}のバックアップに失敗しました。",
     "zh": "{0}存档备份失败",
+    "zh-TW": "{0}存檔備份失敗",
     "ru": "Не удалось сделать бэкап {0}."
   },
   "outcome.path_too_long": {
@@ -813,6 +880,7 @@
     "nl": "Pad te lang voor de console.\nGebruik een kortere mapnaam.",
     "ja": "パスがコンソールには長すぎます。\n短いフォルダ名を使ってください。",
     "zh": "路径超出主机限制\n请使用更短的文件夹名",
+    "zh-TW": "路徑超出主機限制\n請使用更短的資料夾名",
     "ru": "Путь слишком длинный для консоли.\nИспользуйте более короткое имя папки."
   },
   "outcome.card_nand_save": {
@@ -825,6 +893,7 @@
     "nl": "Deze cartridge slaat op in interne NAND.\nDe 3DS kan die niet benaderen.\nGebruik GodMode9i in DS-modus.",
     "ja": "このカードはカード内のNANDにセーブします。\n3DSからはアクセスできません。\nDSモードのGodMode9iを使ってください。",
     "zh": "此卡带将存档保存在卡带内置NAND中\n3DS无法访问\n请在DS模式下使用GodMode9i",
+    "zh-TW": "此卡匣將存檔儲存在卡匣內建NAND中\n3DS無法訪問\n請在DS模式下使用GodMode9i",
     "ru": "Этот картридж хранит сохранение во внутренней NAND.\n3DS не может получить к ней доступ.\nИспользуйте GodMode9i в режиме DS."
   },
   "outcome.read_file": {
@@ -837,6 +906,7 @@
     "nl": "Kon back-up van savebestand niet lezen.",
     "ja": "セーブファイルのバックアップを読み込めませんでした。",
     "zh": "读取存档备份文件失败",
+    "zh-TW": "讀取存檔備份檔案失敗",
     "ru": "Не удалось прочитать бэкап файла сохранения."
   },
   "outcome.commit": {
@@ -849,6 +919,7 @@
     "nl": "Kon savegegevens niet vastleggen.",
     "ja": "セーブデータのコミットに失敗しました。",
     "zh": "提交存档数据失败",
+    "zh-TW": "提交存檔資料失敗",
     "ru": "Не удалось записать данные сохранения."
   },
   "outcome.secure_value": {
@@ -861,6 +932,7 @@
     "nl": "Kon secure value niet herstellen.",
     "ja": "セキュア値の修正に失敗しました。",
     "zh": "修复安全值失败",
+    "zh-TW": "修復安全值失敗",
     "ru": "Не удалось исправить secure value."
   },
   "outcome.gba_no_save": {
@@ -906,6 +978,7 @@
     "nl": "Herstellen van {0} mislukt.",
     "ja": "{0}のリストアに失敗しました。",
     "zh": "{0}恢复失败",
+    "zh-TW": "{0}還原失敗",
     "ru": "Не удалось восстановить {0}."
   },
   "outcome.backup_success": {
@@ -918,6 +991,7 @@
     "nl": "Voortgang correct op de schijf opgeslagen.",
     "ja": "進行状況をディスクに正しく保存しました。",
     "zh": "存档已成功保存到存储设备中",
+    "zh-TW": "存檔已成功儲存到儲存裝置中",
     "ru": "Прогресс успешно сохранен на диск."
   },
   "outcome.restore_success": {
@@ -930,6 +1004,7 @@
     "nl": "{0}\nis succesvol hersteld.",
     "ja": "{0}\nを正常にリストアしました。",
     "zh": "{0}\n已成功恢复",
+    "zh-TW": "{0}\n已成功還原",
     "ru": "{0}\nуспешно восстановлен."
   },
   "outcome.send_zip": {
@@ -942,6 +1017,7 @@
     "nl": "Kon back-uppakket niet maken.",
     "ja": "バックアップパッケージの作成に失敗しました。",
     "zh": "无法创建备份包",
+    "zh-TW": "無法建立備份包",
     "ru": "Не удалось создать пакет бэкапа."
   },
   "outcome.send_too_large": {
@@ -954,6 +1030,7 @@
     "nl": "Back-up te groot om te verzenden (meer dan 4 GiB).",
     "ja": "バックアップが大きすぎて送信できません (4 GiB超)。",
     "zh": "备份过大，无法发送（超过 4 GB）",
+    "zh-TW": "備份過大，無法傳送（超過 4 GB）",
     "ru": "Бэкап слишком большой для отправки (больше 4 ГиБ)."
   },
   "outcome.send_socket": {
@@ -966,6 +1043,7 @@
     "nl": "Kon socket niet openen.",
     "ja": "ソケットを開けませんでした。",
     "zh": "无法建立网络连接",
+    "zh-TW": "無法建立網路連線",
     "ru": "Не удалось открыть сокет."
   },
   "outcome.send_resolve": {
@@ -978,6 +1056,7 @@
     "nl": "Ongeldig IP-adres.",
     "ja": "無効なIPアドレスです。",
     "zh": "IP 地址无效",
+    "zh-TW": "IP 地址無效",
     "ru": "Некорректный IP-адрес."
   },
   "outcome.send_connect": {
@@ -990,6 +1069,7 @@
     "nl": "Verbinden mislukt.",
     "ja": "接続に失敗しました。",
     "zh": "连接失败",
+    "zh-TW": "連線失敗",
     "ru": "Не удалось подключиться."
   },
   "outcome.send_no_response": {
@@ -1002,6 +1082,7 @@
     "nl": "Ontvanger gaf geen reactie.",
     "ja": "受信側からの応答がありません。",
     "zh": "接收端无响应",
+    "zh-TW": "接收端無響應",
     "ru": "Нет ответа от ресивера."
   },
   "outcome.send_receiver_error": {
@@ -1014,6 +1095,7 @@
     "nl": "Ontvangerfout: {0}",
     "ja": "受信側エラー: {0}",
     "zh": "接收端错误：{0}",
+    "zh-TW": "接收端錯誤：{0}",
     "ru": "Ошибка ресивера: {0}"
   },
   "outcome.send_failed": {
@@ -1026,6 +1108,7 @@
     "nl": "Overdracht mislukt.",
     "ja": "転送に失敗しました。",
     "zh": "传输失败",
+    "zh-TW": "傳輸失敗",
     "ru": "Передача не удалась."
   },
   "outcome.send_interrupted": {
@@ -1038,6 +1121,7 @@
     "nl": "Verbinding onderbroken. De ontvanger\nheeft de overdracht mogelijk geannuleerd.",
     "ja": "接続が中断されました。受信側が\n転送をキャンセルした可能性があります。",
     "zh": "连接已中断。接收端可能已取消传输",
+    "zh-TW": "連線已中斷。接收端可能已取消傳輸",
     "ru": "Соединение прервано. Ресивер\nмог отменить передачу."
   },
   "main.tab_save": {
@@ -1050,6 +1134,7 @@
     "nl": "Save",
     "ja": "セーブ",
     "zh": "存档",
+    "zh-TW": "存檔",
     "ru": "Сохранение"
   },
   "main.tab_extdata": {
@@ -1062,6 +1147,7 @@
     "nl": "Extdata",
     "ja": "拡張データ",
     "zh": "扩展数据",
+    "zh-TW": "擴充套件資料",
     "ru": "Extdata"
   },
   "main.backup": {
@@ -1074,6 +1160,7 @@
     "nl": "Back-up",
     "ja": "バックアップ",
     "zh": "备份存档",
+    "zh-TW": "備份存檔",
     "ru": "Бэкап"
   },
   "main.restore": {
@@ -1086,6 +1173,7 @@
     "nl": "Herstellen",
     "ja": "リストア",
     "zh": "恢复存档",
+    "zh-TW": "還原存檔",
     "ru": "Восстановить"
   },
   "main.backup_short": {
@@ -1098,6 +1186,7 @@
     "nl": "Back-up",
     "ja": "バックアップ",
     "zh": "备份",
+    "zh-TW": "備份",
     "ru": "Бэкап"
   },
   "main.restore_short": {
@@ -1110,6 +1199,7 @@
     "nl": "Herst.",
     "ja": "リストア",
     "zh": "恢复",
+    "zh-TW": "還原",
     "ru": "Восст."
   },
   "main.backup_selected": {
@@ -1122,6 +1212,7 @@
     "nl": "Back-up geselecteerd",
     "ja": "選択項目をバックアップ",
     "zh": "备份选中的软件",
+    "zh-TW": "備份選中的軟體",
     "ru": "Бэкап выбранного"
   },
   "main.backup_n_selected": {
@@ -1134,6 +1225,7 @@
     "nl": "Back-up {0} geselecteerd",
     "ja": "{0}個をバックアップ",
     "zh": "备份选中的{0}项",
+    "zh-TW": "備份選中的{0}項",
     "ru": "Бэкап выбранных: {0}"
   },
   "main.loading": {
@@ -1146,6 +1238,7 @@
     "nl": "Titels laden... {0}%",
     "ja": "タイトルを読み込み中... {0}%",
     "zh": "正在加载游戏... {0}%",
+    "zh-TW": "正在載入遊戲... {0}%",
     "ru": "Загрузка тайтлов... {0}%"
   },
   "main.selected_badge": {
@@ -1158,6 +1251,7 @@
     "nl": "{0} geselecteerd",
     "ja": "{0}個選択中",
     "zh": "已选中{0}项",
+    "zh-TW": "已選中{0}項",
     "ru": "{0} выбрано"
   },
   "main.titles_count": {
@@ -1170,6 +1264,7 @@
     "nl": "{0} titels",
     "ja": "{0}タイトル",
     "zh": "{0} 个游戏",
+    "zh-TW": "{0} 個遊戲",
     "ru": "Тайтлов: {0}"
   },
   "main.transferring": {
@@ -1182,6 +1277,7 @@
     "nl": "Back-up overdragen",
     "ja": "バックアップを転送中",
     "zh": "正在传输备份",
+    "zh-TW": "正在傳輸備份",
     "ru": "Передача бэкапа"
   },
   "main.progress_pct": {
@@ -1194,6 +1290,7 @@
     "nl": "{0}... {1}%",
     "ja": "{0}... {1}%",
     "zh": "{0}... {1}%",
+    "zh-TW": "{0}... {1}%",
     "ru": "{0}... {1}%"
   },
   "main.favorite": {
@@ -1206,6 +1303,7 @@
     "nl": "Favoriet",
     "ja": "お気に入り",
     "zh": "收藏",
+    "zh-TW": "收藏",
     "ru": "Избранное"
   },
   "main.backups": {
@@ -1218,6 +1316,7 @@
     "nl": "Back-ups",
     "ja": "バックアップ",
     "zh": "备份",
+    "zh-TW": "備份",
     "ru": "Бэкапы"
   },
   "main.no_backups": {
@@ -1230,6 +1329,7 @@
     "nl": "Geen back-ups",
     "ja": "バックアップがありません",
     "zh": "没有备份",
+    "zh-TW": "沒有備份",
     "ru": "Нет бэкапов"
   },
   "main.backups_meta": {
@@ -1242,6 +1342,7 @@
     "nl": "{0} opgeslagen  ·  {1}",
     "ja": "{0}件保存  ·  {1}",
     "zh": "已保存{0}个  ·  {1}",
+    "zh-TW": "已儲存{0}個  ·  {1}",
     "ru": "{0} сохранено  ·  {1}"
   },
   "main.backups_meta_pending": {
@@ -1254,6 +1355,7 @@
     "nl": "{0} opgeslagen  ·  …",
     "ja": "{0}件保存  ·  …",
     "zh": "已保存{0}个  ·  …",
+    "zh-TW": "已儲存{0}個  ·  …",
     "ru": "{0} сохранено  ·  …"
   },
   "main.in_progress": {
@@ -1266,6 +1368,7 @@
     "nl": "{0} bezig...",
     "ja": "{0}実行中...",
     "zh": "{0}进行中...",
+    "zh-TW": "{0}進行中...",
     "ru": "{0} в процессе..."
   },
   "main.copying": {
@@ -1278,6 +1381,7 @@
     "nl": "Bestanden kopiëren",
     "ja": "ファイルをコピー中",
     "zh": "正在复制文件",
+    "zh-TW": "正在複製檔案",
     "ru": "Копирование файлов"
   },
   "main.mode.backup": {
@@ -1290,6 +1394,7 @@
     "nl": "Back-up",
     "ja": "バックアップ",
     "zh": "备份",
+    "zh-TW": "備份",
     "ru": "Бэкап"
   },
   "main.mode.restore": {
@@ -1302,6 +1407,7 @@
     "nl": "Herstel",
     "ja": "リストア",
     "zh": "恢复",
+    "zh-TW": "還原",
     "ru": "Восстановление"
   },
   "main.mode.clearing": {
@@ -1314,6 +1420,7 @@
     "nl": "Opschonen",
     "ja": "消去",
     "zh": "清理",
+    "zh-TW": "清理",
     "ru": "Очистка"
   },
   "main.mode.verify": {
@@ -1326,6 +1433,7 @@
     "nl": "Verificatie",
     "ja": "検証",
     "zh": "校验",
+    "zh-TW": "校驗",
     "ru": "Проверка"
   },
   "main.mode.extracting_package": {
@@ -1338,6 +1446,7 @@
     "nl": "Pakket uitpakken",
     "ja": "パッケージ展開",
     "zh": "软件包解压",
+    "zh-TW": "軟體包解壓",
     "ru": "Распаковка пакета"
   },
   "main.mode.sending_backup": {
@@ -1350,6 +1459,7 @@
     "nl": "Back-up verzenden",
     "ja": "バックアップ送信",
     "zh": "发送备份",
+    "zh-TW": "傳送備份",
     "ru": "Отправка бэкапа"
   },
   "main.save_n": {
@@ -1362,6 +1472,7 @@
     "nl": "Save {0} / {1}",
     "ja": "セーブ {0} / {1}",
     "zh": "存档 {0} / {1}",
+    "zh-TW": "存檔 {0} / {1}",
     "ru": "Сохранение {0} / {1}"
   },
   "main.file_n": {
@@ -1374,6 +1485,7 @@
     "nl": "Bestand {0} / {1}",
     "ja": "ファイル {0} / {1}",
     "zh": "文件 {0} / {1}",
+    "zh-TW": "檔案 {0} / {1}",
     "ru": "Файл {0} / {1}"
   },
   "main.system_title": {
@@ -1386,6 +1498,7 @@
     "nl": "Systeemtitel",
     "ja": "システムタイトル",
     "zh": "系统程序",
+    "zh-TW": "系統程式",
     "ru": "Системный тайтл"
   },
   "main.new_backup": {
@@ -1398,6 +1511,7 @@
     "nl": "Nieuwe back-up",
     "ja": "新規バックアップ",
     "zh": "新建备份",
+    "zh-TW": "新建備份",
     "ru": "Новый бэкап"
   },
   "main.from_current_save": {
@@ -1410,6 +1524,7 @@
     "nl": "Van huidige save",
     "ja": "現在のセーブから",
     "zh": "从当前存档",
+    "zh-TW": "從當前存檔",
     "ru": "Из текущего сохранения"
   },
   "main.from_current_extdata": {
@@ -1422,6 +1537,7 @@
     "nl": "Van huidige extdata",
     "ja": "現在の拡張データから",
     "zh": "从当前扩展数据",
+    "zh-TW": "從當前擴充套件資料",
     "ru": "Из текущей extdata"
   },
   "main.from_wireless": {
@@ -1434,6 +1550,7 @@
     "nl": "Van een ander apparaat",
     "ja": "他の端末から",
     "zh": "从其他设备",
+    "zh-TW": "從其他裝置",
     "ru": "С другого устройства"
   },
   "main.backup_empty": {
@@ -1446,6 +1563,7 @@
     "nl": "Geselecteerde back-up is leeg.",
     "ja": "選択したバックアップは空です。",
     "zh": "选中的备份是空的",
+    "zh-TW": "選中的備份是空的",
     "ru": "Выбранный бэкап пуст."
   },
   "main.confirm_restore": {
@@ -1458,6 +1576,7 @@
     "nl": "Geselecteerde save herstellen?",
     "ja": "選択したセーブをリストアしますか?",
     "zh": "要恢复所选的存档吗？",
+    "zh-TW": "要還原所選的存檔嗎？",
     "ru": "Восстановить выбранное сохранение?"
   },
   "main.confirm_backup_title": {
@@ -1470,6 +1589,7 @@
     "nl": "Back-up maken van geselecteerde titel?",
     "ja": "選択したタイトルをバックアップしますか?",
     "zh": "要备份所选的软件吗？",
+    "zh-TW": "要備份所選的軟體嗎？",
     "ru": "Сделать бэкап выбранного тайтла?"
   },
   "main.confirm_backup_save": {
@@ -1482,6 +1602,7 @@
     "nl": "Back-up maken van geselecteerde save?",
     "ja": "選択したセーブをバックアップしますか?",
     "zh": "要备份所选的存档吗？",
+    "zh-TW": "要備份所選的存檔嗎？",
     "ru": "Сделать бэкап выбранного сохранения?"
   },
   "main.confirm_delete": {
@@ -1494,6 +1615,7 @@
     "nl": "Geselecteerde back-up verwijderen?",
     "ja": "選択したバックアップを削除しますか?",
     "zh": "是否删除所选备份？",
+    "zh-TW": "是否刪除所選備份？",
     "ru": "Удалить выбранный бэкап?"
   },
   "main.receiver_failed": {
@@ -1506,6 +1628,7 @@
     "nl": "Kon ontvanger niet starten.",
     "ja": "受信の開始に失敗しました。",
     "zh": "无法启动接收端",
+    "zh-TW": "無法啟動接收端",
     "ru": "Не удалось запустить ресивер."
   },
   "main.no_titles": {
@@ -1518,6 +1641,7 @@
     "nl": "Geen titels beschikbaar.",
     "ja": "利用可能なタイトルがありません。",
     "zh": "没有可用的游戏",
+    "zh-TW": "沒有可用的遊戲",
     "ru": "Нет доступных тайтлов."
   },
   "main.select_backup_send": {
@@ -1530,6 +1654,7 @@
     "nl": "Selecteer een back-up om te verzenden.",
     "ja": "送信するバックアップを選択してください。",
     "zh": "请选择要发送的备份",
+    "zh-TW": "請選擇要傳送的備份",
     "ru": "Выберите бэкап для отправки."
   },
   "main.receiver_ip_port": {
@@ -1542,6 +1667,7 @@
     "nl": "IP:POORT van ontvanger",
     "ja": "受信側 IP:PORT",
     "zh": "接收方 IP:端口",
+    "zh-TW": "接收方 IP:埠",
     "ru": "IP:PORT ресивера"
   },
   "main.invalid_ip_port": {
@@ -1554,6 +1680,7 @@
     "nl": "Ongeldig IP:POORT.",
     "ja": "無効なIP:PORTです。",
     "zh": "IP:端口 无效",
+    "zh-TW": "IP:埠 無效",
     "ru": "Некорректный IP:PORT."
   },
   "main.pin_prompt": {
@@ -1566,6 +1693,7 @@
     "nl": "PIN (4 cijfers)",
     "ja": "PIN(4桁)",
     "zh": "PIN（4位数字）",
+    "zh-TW": "PIN（4位數字）",
     "ru": "PIN (4 цифры)"
   },
   "main.pin_invalid": {
@@ -1578,6 +1706,7 @@
     "nl": "PIN moet 4 cijfers hebben.",
     "ja": "PINは4桁で入力してください。",
     "zh": "PIN 必须为 4 位数字",
+    "zh-TW": "PIN 必須為 4 位數字",
     "ru": "PIN-код должен состоять из 4 цифр."
   },
   "main.clear_selection": {
@@ -1590,6 +1719,7 @@
     "nl": "Selectie wissen",
     "ja": "選択を解除",
     "zh": "取消选择",
+    "zh-TW": "取消選擇",
     "ru": "Очистить выбранное"
   },
   "main.hint.go_saves": {
@@ -1602,6 +1732,7 @@
     "nl": "Ga naar saves",
     "ja": "セーブへ移動",
     "zh": "管理该游戏的存档",
+    "zh-TW": "管理該遊戲的存檔",
     "ru": "Перейти к сохранениям"
   },
   "common.cancel": {
@@ -1614,6 +1745,7 @@
     "nl": "Annuleren",
     "ja": "キャンセル",
     "zh": "取消",
+    "zh-TW": "取消",
     "ru": "Отменить"
   },
   "common.error": {
@@ -1626,6 +1758,7 @@
     "nl": "Fout",
     "ja": "エラー",
     "zh": "错误",
+    "zh-TW": "錯誤",
     "ru": "Ошибка"
   },
   "overlay.select": {
@@ -1638,6 +1771,7 @@
     "nl": "Selecteren",
     "ja": "選択",
     "zh": "选择",
+    "zh-TW": "選擇",
     "ru": "Выбор"
   },
   "overlay.open": {
@@ -1650,6 +1784,7 @@
     "nl": "Openen",
     "ja": "開く",
     "zh": "打开",
+    "zh-TW": "開啟",
     "ru": "Открыть"
   },
   "overlay.use_folder": {
@@ -1662,6 +1797,7 @@
     "nl": "Map gebruiken",
     "ja": "このフォルダを使用",
     "zh": "使用该目录",
+    "zh-TW": "使用該目錄",
     "ru": "Использовать папку"
   },
   "overlay.up": {
@@ -1674,6 +1810,7 @@
     "nl": "Omhoog",
     "ja": "上へ",
     "zh": "上一级",
+    "zh-TW": "上一級",
     "ru": "Вверх"
   },
   "overlay.no_subfolders": {
@@ -1686,6 +1823,7 @@
     "nl": "Geen submappen hier.",
     "ja": "サブフォルダがありません。",
     "zh": "此处没有子目录。",
+    "zh-TW": "此處沒有子目錄。",
     "ru": "Нет подпапок."
   },
   "overlay.use_folder_hint": {
@@ -1698,6 +1836,7 @@
     "nl": "Druk op X om deze map te gebruiken.",
     "ja": "Xボタンでこのフォルダを使用します。",
     "zh": "按 X 键使用此目录",
+    "zh-TW": "按 X 鍵使用此目錄",
     "ru": "Нажмите X, чтобы использовать эту папку."
   },
   "transfer.send": {
@@ -1710,6 +1849,7 @@
     "nl": "Verzenden",
     "ja": "送信",
     "zh": "发送",
+    "zh-TW": "傳送",
     "ru": "Отправить"
   },
   "transfer.receive": {
@@ -1722,6 +1862,7 @@
     "nl": "Ontvangen",
     "ja": "受信",
     "zh": "接收",
+    "zh-TW": "接收",
     "ru": "Получить"
   },
   "transfer.unnamed": {
@@ -1734,6 +1875,7 @@
     "nl": "(back-up zonder naam)",
     "ja": "(名称未設定のバックアップ)",
     "zh": "（未命名备份）",
+    "zh-TW": "（未命名備份）",
     "ru": "(безымянный бэкап)"
   },
   "transfer.file_received": {
@@ -1746,6 +1888,7 @@
     "nl": "Bestand ontvangen",
     "ja": "ファイルを受信しました",
     "zh": "文件已接收",
+    "zh-TW": "檔案已接收",
     "ru": "Файл получен"
   },
   "transfer.refresh_hint": {
@@ -1758,6 +1901,7 @@
     "nl": "Druk op A (OK) om nu te vernieuwen",
     "ja": "Aボタンで今すぐ更新",
     "zh": "按 A 键立即刷新",
+    "zh-TW": "按 A 鍵立即重新整理",
     "ru": "Нажмите A (OK) для обновления списка"
   },
   "transfer.receiver_active": {
@@ -1770,6 +1914,7 @@
     "nl": "Ontvanger actief",
     "ja": "受信待機中",
     "zh": "等待接收中",
+    "zh-TW": "等待接收中",
     "ru": "Ресивер активен"
   },
   "transfer.receiver_stopped": {
@@ -1782,6 +1927,7 @@
     "nl": "Ontvanger gestopt",
     "ja": "受信を停止しました",
     "zh": "接收已停止",
+    "zh-TW": "接收已停止",
     "ru": "Ресивер остановлен"
   },
   "transfer.downloading": {
@@ -1794,6 +1940,7 @@
     "nl": "Back-up downloaden",
     "ja": "バックアップをダウンロード中",
     "zh": "正在下载备份",
+    "zh-TW": "正在下載備份",
     "ru": "Загрузка бэкапа"
   },
   "transfer.close_hint": {
@@ -1806,6 +1953,7 @@
     "nl": "Druk op B om te sluiten",
     "ja": "Bボタンで閉じる",
     "zh": "按 B 键关闭",
+    "zh-TW": "按 B 鍵關閉",
     "ru": "Нажмите B для закрытия"
   },
   "transfer.cancel_hint": {
@@ -1818,6 +1966,7 @@
     "nl": "Houd B ingedrukt om te annuleren",
     "ja": "Bボタン長押しでキャンセル",
     "zh": "长按 B 键取消",
+    "zh-TW": "長按 B 鍵取消",
     "ru": "Удерживайте B для отмены"
   },
   "transfer.cancelling": {
@@ -1830,6 +1979,7 @@
     "nl": "Annuleren...",
     "ja": "キャンセル中...",
     "zh": "正在取消...",
+    "zh-TW": "正在取消...",
     "ru": "Отмена..."
   },
   "transfer.cancelled": {
@@ -1842,6 +1992,7 @@
     "nl": "Overdracht geannuleerd.",
     "ja": "転送をキャンセルしました。",
     "zh": "传输已取消",
+    "zh-TW": "傳輸已取消",
     "ru": "Передача отменена."
   },
   "transfer.completed": {
@@ -1854,6 +2005,7 @@
     "nl": "Overdracht voltooid.",
     "ja": "転送が完了しました。",
     "zh": "传输已完成",
+    "zh-TW": "傳輸已完成",
     "ru": "Передача выполнена."
   },
   "media.sd_card": {
@@ -1866,6 +2018,7 @@
     "nl": "SD-kaart",
     "ja": "SDカード",
     "zh": "SD 卡",
+    "zh-TW": "SD 卡",
     "ru": "SD-карта"
   },
   "media.cartridge": {
@@ -1878,6 +2031,7 @@
     "nl": "Cartridge",
     "ja": "カートリッジ",
     "zh": "卡带",
+    "zh-TW": "卡匣",
     "ru": "Картридж"
   },
   "main.scripts": {
@@ -1890,6 +2044,7 @@
     "nl": "Scripts",
     "ja": "スクリプト",
     "zh": "脚本",
+    "zh-TW": "指令碼",
     "ru": "Скрипты"
   },
   "menu.title": {
@@ -1902,6 +2057,7 @@
     "nl": "Menu",
     "ja": "メニュー",
     "zh": "菜单",
+    "zh-TW": "選單",
     "ru": "Меню"
   },
   "scripts.pick_prompt": {
@@ -1914,6 +2070,7 @@
     "nl": "Een script uitvoeren",
     "ja": "スクリプトを実行",
     "zh": "运行一个脚本",
+    "zh-TW": "執行一個指令碼",
     "ru": "Запустить скрипт"
   },
   "scripts.empty": {
@@ -1926,6 +2083,7 @@
     "nl": "Geen scripts gevonden in /3ds/Checkpoint/scripts",
     "ja": "/3ds/Checkpoint/scripts にスクリプトがありません",
     "zh": "在 /3ds/Checkpoint/scripts 目录下没有找到脚本",
+    "zh-TW": "在 /3ds/Checkpoint/scripts 目錄下沒有找到指令碼",
     "ru": "Скрипты не обнаружены в /3ds/Checkpoint/scripts"
   },
   "scripts.universal_tag": {
@@ -1938,6 +2096,7 @@
     "nl": "universeel",
     "ja": "共通",
     "zh": "通用",
+    "zh-TW": "通用",
     "ru": "универсальный"
   },
   "scripts.overridden_tag": {
@@ -1950,6 +2109,7 @@
     "nl": "vervangen",
     "ja": "上書き",
     "zh": "覆盖",
+    "zh-TW": "覆蓋",
     "ru": "перезаписывающий"
   },
   "scripts.confirm_run": {
@@ -1962,6 +2122,7 @@
     "nl": "\"{0}\" uitvoeren?\nScripts kunnen saves en de inhoud van de SD-kaart wijzigen.",
     "ja": "\"{0}\"を実行しますか？\nスクリプトはセーブデータやSDカードの内容を変更できます。",
     "zh": "要运行\"{0}\"吗？\n脚本可能会修改存档和SD卡中的内容",
+    "zh-TW": "要執行\"{0}\"嗎？\n指令碼可能會修改存檔和SD卡中的內容",
     "ru": "Запустить \"{0}\"?\nСкрипты могут модифицировать сохранения и данные на SD-карте."
   },
   "scripts.running": {
@@ -1974,6 +2135,7 @@
     "nl": "{0} wordt uitgevoerd…",
     "ja": "{0}を実行中…",
     "zh": "{0}运行中",
+    "zh-TW": "{0}執行中",
     "ru": "Запущен {0}…"
   },
   "scripts.success": {
@@ -1986,6 +2148,7 @@
     "nl": "\"{0}\" voltooid.",
     "ja": "「{0}」が完了しました。",
     "zh": "\"{0}\"执行完成",
+    "zh-TW": "\"{0}\"執行完成",
     "ru": "\"{0}\" выполнен."
   },
   "scripts.failed": {
@@ -1998,6 +2161,7 @@
     "nl": "\"{0}\" mislukt.",
     "ja": "「{0}」が失敗しました。",
     "zh": "\"{0}\"执行失败",
+    "zh-TW": "\"{0}\"執行失敗",
     "ru": "Не удалось выполнить \"{0}\"."
   },
   "scripts.aborted": {
@@ -2010,6 +2174,7 @@
     "nl": "\"{0}\" afgebroken.",
     "ja": "「{0}」を中止しました。",
     "zh": "\"{0}\"执行已中止",
+    "zh-TW": "\"{0}\"執行已中止",
     "ru": "\"{0}\" отменен."
   },
   "scripts.start_failed": {
@@ -2022,6 +2187,7 @@
     "nl": "De scriptthread kon niet worden gestart.",
     "ja": "スクリプトスレッドを開始できませんでした。",
     "zh": "脚本线程启动失败",
+    "zh-TW": "指令碼執行緒啟動失敗",
     "ru": "Не удалось запустить поток скрипта."
   },
   "scripts.no_items": {
@@ -2034,6 +2200,7 @@
     "nl": "Niets om te kiezen",
     "ja": "選択できる項目がありません",
     "zh": "没有可选择的项目",
+    "zh-TW": "沒有可選擇的專案",
     "ru": "Нечего выбрать"
   },
   "scripts.toggle": {
@@ -2046,6 +2213,7 @@
     "nl": "Wisselen",
     "ja": "切り替え",
     "zh": "切换",
+    "zh-TW": "切換",
     "ru": "Переключить"
   },
   "scripts.log_title": {
@@ -2058,6 +2226,7 @@
     "nl": "Scriptlogboek",
     "ja": "スクリプトログ",
     "zh": "脚本日志",
+    "zh-TW": "指令碼日誌",
     "ru": "Лог скрипта"
   },
   "scripts.scroll_logs": {
@@ -2070,6 +2239,7 @@
     "nl": "Log scrollen",
     "ja": "ログをスクロール",
     "zh": "滚动日志",
+    "zh-TW": "滾動日誌",
     "ru": "Прокрутка лога"
   },
   "scripts.close": {
@@ -2082,6 +2252,7 @@
     "nl": "Sluiten",
     "ja": "閉じる",
     "zh": "关闭",
+    "zh-TW": "關閉",
     "ru": "Закрыть"
   },
   "scripts.waiting": {
@@ -2094,6 +2265,7 @@
     "nl": "Wacht op je antwoord…",
     "ja": "入力を待っています…",
     "zh": "等待你的回答…",
+    "zh-TW": "等待你的回答…",
     "ru": "Ожидание вашего ответа…"
   },
   "scripts.working": {
@@ -2106,6 +2278,7 @@
     "nl": "Bezig…",
     "ja": "処理中…",
     "zh": "处理中…",
+    "zh-TW": "處理中…",
     "ru": "Выполняется…"
   },
   "scripts.log_empty": {
@@ -2118,6 +2291,7 @@
     "nl": "Het script heeft nog niets afgedrukt.",
     "ja": "スクリプトはまだ何も出力していません。",
     "zh": "脚本尚未输出任何内容。",
+    "zh-TW": "指令碼尚未輸出任何內容。",
     "ru": "Скрипт еще ничего не вывел."
   },
   "scripts.exit_code": {
@@ -2130,6 +2304,7 @@
     "nl": "afsluitcode {0}",
     "ja": "終了コード {0}",
     "zh": "退出 {0}",
+    "zh-TW": "退出 {0}",
     "ru": "выход {0}"
   }
 }
