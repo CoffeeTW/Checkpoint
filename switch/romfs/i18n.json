@@ -22,7 +22,7 @@
     "nl": "opgeslagen naar",
     "ja": "保存先:",
     "zh": "配置文件已保存至",
-    "zh-TW": "配置檔案已儲存至",
+    "zh-TW": "設定檔已儲存至",
     "ru": "сохранено в"
   },
   "settings.cat.general": {
@@ -35,7 +35,7 @@
     "nl": "Algemeen",
     "ja": "一般",
     "zh": "通用",
-    "zh-TW": "通用",
+    "zh-TW": "一般",
     "ru": "Основные"
   },
   "settings.cat.library": {
@@ -61,7 +61,7 @@
     "nl": "Save-mappen",
     "ja": "セーブフォルダ",
     "zh": "存档位置",
-    "zh-TW": "存檔位置",
+    "zh-TW": "儲存資料夾",
     "ru": "Папки сохранений"
   },
   "settings.cat.connectivity": {
@@ -139,7 +139,7 @@
     "nl": "CONNECTIVITEIT",
     "ja": "接続",
     "zh": "远程连接",
-    "zh-TW": "遠端連線",
+    "zh-TW": "連線",
     "ru": "СЕТЬ"
   },
   "settings.section.logs": {
@@ -191,7 +191,7 @@
     "nl": "GEBRUIKERS-SAVEMAPPEN",
     "ja": "ユーザーセーブフォルダ",
     "zh": "用户存档保存位置",
-    "zh-TW": "使用者存檔儲存位置",
+    "zh-TW": "使用者儲存資料夾",
     "ru": "ПАПКИ USER СОХРАНЕНИЙ"
   },
   "settings.section.device_folders": {
@@ -204,7 +204,7 @@
     "nl": "APPARAAT-SAVEMAPPEN",
     "ja": "デバイスセーブフォルダ",
     "zh": "设备存档保存位置",
-    "zh-TW": "裝置存檔儲存位置",
+    "zh-TW": "裝置儲存資料夾",
     "ru": "ПАПКИ DEVICE СОХРАНЕНИЙ"
   },
   "settings.section.about": {
@@ -230,7 +230,7 @@
     "nl": "CREDITS",
     "ja": "クレジット",
     "zh": "鸣谢",
-    "zh-TW": "鳴謝",
+    "zh-TW": "製作人員",
     "ru": "РАЗРАБОТЧИКИ"
   },
   "settings.general.theme": {
@@ -256,7 +256,7 @@
     "nl": "Wordt direct toegepast",
     "ja": "すぐに反映されます",
     "zh": "立即生效",
-    "zh-TW": "立即生效",
+    "zh-TW": "立即套用",
     "ru": "Применяется немедленно"
   },
   "settings.theme.dark": {
@@ -334,7 +334,7 @@
     "nl": "Volgorde van het titelraster bij opstarten",
     "ja": "起動時のタイトルグリッドの順序",
     "zh": "启动软件时，游戏列表的排序方式",
-    "zh-TW": "啟動軟體時，遊戲列表的排序方式",
+    "zh-TW": "啟動時的遊戲列表排序方式",
     "ru": "Сортировка сетки тайтлов при запуске"
   },
   "settings.general.confirm_restore": {
@@ -347,7 +347,7 @@
     "nl": "Bevestigen vóór herstellen",
     "ja": "リストア前に確認",
     "zh": "恢复存档前先确认",
-    "zh-TW": "還原存檔前先確認",
+    "zh-TW": "還原前先確認",
     "ru": "Подтвердить перед восстановлением"
   },
   "settings.general.confirm_restore.sub": {
@@ -360,7 +360,7 @@
     "nl": "Vragen voordat een save wordt overschreven bij herstellen",
     "ja": "リストア時にセーブを上書きする前に確認する",
     "zh": "恢复存档时，在覆盖现有存档前弹出提示",
-    "zh-TW": "還原存檔時，在覆蓋現有存檔前彈出提示",
+    "zh-TW": "還原時覆寫現有儲存資料前先詢問",
     "ru": "Спрашивать перед перезаписью сохранения"
   },
   "settings.general.quick_backup": {
@@ -373,7 +373,7 @@
     "nl": "Naam voor back-up overslaan",
     "ja": "バックアップ名の入力を省略",
     "zh": "备份存档时，跳过输入存档的名称",
-    "zh-TW": "備份存檔時，跳過輸入存檔的名稱",
+    "zh-TW": "略過備份名稱輸入",
     "ru": "Пропустить ввод имени бэкапа"
   },
   "settings.general.quick_backup.sub": {
@@ -386,7 +386,7 @@
     "nl": "Gebruik de tijdstempel, geen toetsenbord",
     "ja": "キーボードを使わずタイムスタンプを使用",
     "zh": "使用时间戳命名存档备份，无需输入名称",
-    "zh-TW": "使用時間戳命名存檔備份，無需輸入名稱",
+    "zh-TW": "使用時間戳記命名，不開啟鍵盤",
     "ru": "Использовать дату и время, не отображать клавиатуру"
   },
   "settings.general.verify_restore": {
@@ -399,7 +399,7 @@
     "nl": "Controleren na herstellen",
     "ja": "リストア後に検証",
     "zh": "恢复存档后校验",
-    "zh-TW": "還原存檔後校驗",
+    "zh-TW": "還原後驗證",
     "ru": "Проверить после восстановления"
   },
   "settings.general.verify_restore.sub": {
@@ -412,7 +412,7 @@
     "nl": "Controleert of de herstelde data overeenkomt met de back-up; trager bij enorme saves",
     "ja": "リストアしたデータがバックアップと一致するか確認（巨大なセーブでは時間がかかります）",
     "zh": "校验恢复后的数据是否与存档备份一致（大型存档的校验耗时会更长）",
-    "zh-TW": "校驗還原後的資料是否與存檔備份一致（大型存檔的校驗耗時會更長）",
+    "zh-TW": "確認還原後的資料與備份相符；大型儲存資料會需要較長時間",
     "ru": "Проверить соответствие восстановленных данных бэкапу; медленнее на больших сохранениях"
   },
   "settings.conn.ftp": {
@@ -438,7 +438,7 @@
     "nl": "Blader door back-ups vanaf een computer",
     "ja": "パソコンからバックアップを閲覧",
     "zh": "从电脑浏览TF卡根目录",
-    "zh-TW": "從電腦瀏覽TF卡根目錄",
+    "zh-TW": "從電腦瀏覽備份",
     "ru": "Просмотреть бэкапы через компьютер"
   },
   "settings.conn.receive_pin": {
@@ -451,7 +451,7 @@
     "nl": "Ontvangst-pincode",
     "ja": "受信PIN",
     "zh": "接收 PIN 码",
-    "zh-TW": "接收 PIN 碼",
+    "zh-TW": "接收 PIN",
     "ru": "PIN приёма"
   },
   "settings.conn.receive_pin.sub": {
@@ -464,7 +464,7 @@
     "nl": "Vaste pincode voor inkomende overdrachten",
     "ja": "受信転送に使う固定PIN",
     "zh": "用于接收传输的固定 PIN 码",
-    "zh-TW": "用於接收傳輸的固定 PIN 碼",
+    "zh-TW": "接收傳輸時使用的固定 PIN",
     "ru": "Постоянный PIN для входящих передач"
   },
   "settings.conn.receive_pin.random": {
@@ -490,7 +490,7 @@
     "nl": "Pincode van 4 cijfers (0 = elke keer willekeurig)",
     "ja": "4桁のPIN(0 = 毎回ランダム)",
     "zh": "4 位 PIN 码（0 = 每次随机）",
-    "zh-TW": "4 位 PIN 碼（0 = 每次隨機）",
+    "zh-TW": "4 位數 PIN（0 = 每次隨機）",
     "ru": "PIN из 4 цифр (0 = случайный каждый раз)"
   },
   "settings.conn.running": {
@@ -516,7 +516,7 @@
     "nl": "· actief op {0}:50000",
     "ja": "· {0}:50000 で実行中",
     "zh": "· 正在 {0}:50000 上运行",
-    "zh-TW": "· 正在 {0}:50000 上執行",
+    "zh-TW": "· 執行於 {0}:50000",
     "ru": "· запущен на {0}:50000"
   },
   "settings.conn.log_server": {
@@ -529,7 +529,7 @@
     "nl": "Logserver",
     "ja": "ログサーバー",
     "zh": "日志服务",
-    "zh-TW": "日誌服務",
+    "zh-TW": "日誌伺服器",
     "ru": "Сервер логов"
   },
   "settings.conn.full_log": {
@@ -581,7 +581,7 @@
     "nl": "Zet een titel bovenaan het raster vast",
     "ja": "タイトルをグリッドの先頭に固定",
     "zh": "将游戏固定至列表顶部",
-    "zh-TW": "將遊戲固定至列表頂部",
+    "zh-TW": "將遊戲固定在列表頂端",
     "ru": "Закрепить тайтл вверху сетки"
   },
   "settings.library.unhide": {
@@ -620,7 +620,7 @@
     "nl": "Een titel uit het raster verwijderen",
     "ja": "タイトルをグリッドから除外",
     "zh": "将游戏从列表中隐藏",
-    "zh-TW": "將遊戲從列表中隱藏",
+    "zh-TW": "從列表中隱藏遊戲",
     "ru": "Убрать тайтл из сетки"
   },
   "settings.pill.add": {
@@ -659,7 +659,7 @@
     "nl": "Save-map toevoegen",
     "ja": "セーブフォルダを追加",
     "zh": "添加存档来源目录",
-    "zh-TW": "新增存檔來源目錄",
+    "zh-TW": "新增儲存資料夾",
     "ru": "Добавить папку сохранения"
   },
   "settings.folders.add_save.sub": {
@@ -672,7 +672,7 @@
     "nl": "Kies een titel en daarna een extra map voor de saves",
     "ja": "タイトルを選び、セーブ用の追加フォルダを選択",
     "zh": "为所选游戏添加一个额外的存档读取目录（该目录中的存档也会被Checkpoint读取并显示）",
-    "zh-TW": "為所選遊戲新增一個額外的存檔讀取目錄（該目錄中的存檔也會被Checkpoint讀取並顯示）",
+    "zh-TW": "選擇遊戲，再指定額外的儲存資料夾",
     "ru": "Выберите тайтл, а затем дополнительную папку для его сохранений"
   },
   "settings.folders.add_device": {
@@ -685,7 +685,7 @@
     "nl": "Apparaat-savemap toevoegen",
     "ja": "デバイスセーブフォルダを追加",
     "zh": "添加设备存档来源目录",
-    "zh-TW": "新增裝置存檔來源目錄",
+    "zh-TW": "新增裝置儲存資料夾",
     "ru": "Добавить папку device сохранений"
   },
   "settings.folders.add_device.sub": {
@@ -698,7 +698,7 @@
     "nl": "Kies een titel en daarna een extra map voor de apparaatsaves",
     "ja": "タイトルを選び、デバイスセーブ用の追加フォルダを選択",
     "zh": "选择一款游戏，然后添加一个包含其设备存档的目录",
-    "zh-TW": "選擇一款遊戲，然後新增一個包含其裝置存檔的目錄",
+    "zh-TW": "選擇遊戲，再指定額外的裝置儲存資料夾",
     "ru": "Выберите тайтл, а затем дополнительную папку для его device сохранений"
   },
   "settings.folders.choose_title": {
@@ -724,7 +724,7 @@
     "nl": "Kies een savemap",
     "ja": "セーブフォルダを選択",
     "zh": "选择一个包含该游戏存档的目录",
-    "zh-TW": "選擇一個包含該遊戲存檔的目錄",
+    "zh-TW": "選擇儲存資料夾",
     "ru": "Выберите папку сохранения"
   },
   "settings.about.version": {
@@ -776,7 +776,7 @@
     "nl": "Nog geen logs.",
     "ja": "ログはまだありません。",
     "zh": "暂无日志。",
-    "zh-TW": "暫無日誌。",
+    "zh-TW": "尚無日誌。",
     "ru": "Нет логов."
   },
   "hint.open": {
@@ -815,7 +815,7 @@
     "nl": "Scrollen",
     "ja": "スクロール",
     "zh": "滚动",
-    "zh-TW": "滾動",
+    "zh-TW": "捲動",
     "ru": "Прокрутка"
   },
   "hint.categories": {
@@ -841,7 +841,7 @@
     "nl": "Wijzigen",
     "ja": "変更",
     "zh": "更改",
-    "zh-TW": "更改",
+    "zh-TW": "變更",
     "ru": "Изменить"
   },
   "hint.select": {
@@ -932,7 +932,7 @@
     "nl": "Niet beschikbaar",
     "ja": "利用不可",
     "zh": "不可用",
-    "zh-TW": "不可用",
+    "zh-TW": "無法使用",
     "ru": "Недоступно"
   },
   "common.yes": {
@@ -1023,7 +1023,7 @@
     "nl": "Map gebruiken",
     "ja": "このフォルダを使用",
     "zh": "使用该目录",
-    "zh-TW": "使用該目錄",
+    "zh-TW": "使用此資料夾",
     "ru": "Использовать папку"
   },
   "overlay.up": {
@@ -1036,7 +1036,7 @@
     "nl": "Omhoog",
     "ja": "上へ",
     "zh": "上一级",
-    "zh-TW": "上一級",
+    "zh-TW": "上一層",
     "ru": "Вверх"
   },
   "overlay.no_subfolders": {
@@ -1049,7 +1049,7 @@
     "nl": "Geen submappen hier.",
     "ja": "サブフォルダがありません。",
     "zh": "此处没有子目录",
-    "zh-TW": "此處沒有子目錄",
+    "zh-TW": "此處沒有子資料夾。",
     "ru": "Нет подпапок."
   },
   "overlay.use_folder_hint": {
@@ -1062,7 +1062,7 @@
     "nl": "Druk op X om deze map te gebruiken.",
     "ja": "Xボタンでこのフォルダを使用します。",
     "zh": "按 X 键使用此目录",
-    "zh-TW": "按 X 鍵使用此目錄",
+    "zh-TW": "按 X 使用此資料夾",
     "ru": "Нажмите X, чтобы использовать эту папку."
   },
   "outcome.mount": {
@@ -1075,7 +1075,7 @@
     "nl": "Kon save niet koppelen.",
     "ja": "セーブのマウントに失敗しました。",
     "zh": "无法挂载存档",
-    "zh-TW": "無法掛載存檔",
+    "zh-TW": "無法掛載儲存資料。",
     "ru": "Не удалось смонтировать сохранение."
   },
   "outcome.delete_dst": {
@@ -1088,7 +1088,7 @@
     "nl": "Kon de bestaande back-upmap niet recursief verwijderen.",
     "ja": "既存のバックアップフォルダを再帰的に削除できませんでした。",
     "zh": "无法删除现有备份目录与其所包含的全部文件",
-    "zh-TW": "無法刪除現有備份目錄與其所包含的全部檔案",
+    "zh-TW": "無法遞迴刪除現有備份資料夾。",
     "ru": "Не удалось рекурсивно удалить папку\nсуществующего бэкапа."
   },
   "outcome.create_dst": {
@@ -1101,7 +1101,7 @@
     "nl": "Kon doelmap niet aanmaken.",
     "ja": "出力先フォルダを作成できませんでした。",
     "zh": "无法创建目标目录",
-    "zh-TW": "無法建立目標目錄",
+    "zh-TW": "無法建立目的資料夾。",
     "ru": "Не удалось создать папку назначения."
   },
   "outcome.backup_failed": {
@@ -1114,7 +1114,7 @@
     "nl": "Back-up van save mislukt.",
     "ja": "セーブのバックアップに失敗しました。",
     "zh": "存档备份失败",
-    "zh-TW": "存檔備份失敗",
+    "zh-TW": "無法備份儲存資料。",
     "ru": "Не удалось создать бэкап сохранения."
   },
   "outcome.delete_save": {
@@ -1127,7 +1127,7 @@
     "nl": "Kon save niet verwijderen.",
     "ja": "セーブの削除に失敗しました。",
     "zh": "存档删除失败",
-    "zh-TW": "存檔刪除失敗",
+    "zh-TW": "無法刪除儲存資料。",
     "ru": "Не удалось удалить сохранение."
   },
   "outcome.commit": {
@@ -1140,7 +1140,7 @@
     "nl": "Kon niet vastleggen op save-apparaat.",
     "ja": "セーブデバイスへのコミットに失敗しました。",
     "zh": "无法将存档写入到存储设备",
-    "zh-TW": "無法將存檔寫入到儲存裝置",
+    "zh-TW": "無法將儲存資料寫入儲存裝置。",
     "ru": "Не удалось записать данные сохранения на устройство."
   },
   "outcome.restore_failed": {
@@ -1153,7 +1153,7 @@
     "nl": "Herstellen van save mislukt.",
     "ja": "セーブのリストアに失敗しました。",
     "zh": "存档恢复失败",
-    "zh-TW": "存檔還原失敗",
+    "zh-TW": "無法還原儲存資料。",
     "ru": "Не удалось восстановить сохранение."
   },
   "outcome.verify_failed": {
@@ -1166,7 +1166,7 @@
     "nl": "De herstelde save komt niet overeen met de back-up. Zie het logbestand.",
     "ja": "リストアしたセーブがバックアップと一致しません。ログを確認してください。",
     "zh": "恢复的存档与备份不一致，请查看日志",
-    "zh-TW": "還原的存檔與備份不一致，請檢視日誌",
+    "zh-TW": "還原後的儲存資料與備份不相符，請檢視日誌。",
     "ru": "Восстановленное сохранение не совпадает с резервной копией. Смотрите журнал."
   },
   "main.backup": {
@@ -1179,7 +1179,7 @@
     "nl": "Back-up",
     "ja": "バックアップ",
     "zh": "备份存档",
-    "zh-TW": "備份存檔",
+    "zh-TW": "備份",
     "ru": "Бэкап"
   },
   "main.restore": {
@@ -1192,7 +1192,7 @@
     "nl": "Herstellen",
     "ja": "リストア",
     "zh": "恢复存档",
-    "zh-TW": "還原存檔",
+    "zh-TW": "還原",
     "ru": "Восстановить"
   },
   "main.play_time": {
@@ -1205,7 +1205,7 @@
     "nl": "Speeltijd",
     "ja": "プレイ時間",
     "zh": "游戏时长",
-    "zh-TW": "遊戲時長",
+    "zh-TW": "遊玩時間",
     "ru": "Время в игре"
   },
   "main.backups_count": {
@@ -1218,7 +1218,7 @@
     "nl": "BACK-UPS · {0}",
     "ja": "バックアップ · {0}",
     "zh": "现有{0}个备份",
-    "zh-TW": "現有{0}個備份",
+    "zh-TW": "備份 · {0}",
     "ru": "БЭКАПЫ · {0}"
   },
   "main.backup_n_title": {
@@ -1296,7 +1296,7 @@
     "nl": "Opschonen",
     "ja": "消去",
     "zh": "清理",
-    "zh-TW": "清理",
+    "zh-TW": "清除中",
     "ru": "Очистка"
   },
   "main.mode.verify": {
@@ -1309,7 +1309,7 @@
     "nl": "Verificatie",
     "ja": "検証",
     "zh": "校验",
-    "zh-TW": "校驗",
+    "zh-TW": "驗證",
     "ru": "Проверка"
   },
   "main.mode.extracting_package": {
@@ -1322,7 +1322,7 @@
     "nl": "Pakket uitpakken",
     "ja": "パッケージ展開",
     "zh": "软件包解压",
-    "zh-TW": "軟體包解壓",
+    "zh-TW": "正在解壓縮套件",
     "ru": "Распаковка пакета"
   },
   "main.mode.sending_backup": {
@@ -1335,7 +1335,7 @@
     "nl": "Back-up verzenden",
     "ja": "バックアップ送信",
     "zh": "发送备份",
-    "zh-TW": "傳送備份",
+    "zh-TW": "正在傳送備份",
     "ru": "Отправка бэкапа"
   },
   "main.in_progress": {
@@ -1348,7 +1348,7 @@
     "nl": "{0} bezig...",
     "ja": "{0}実行中...",
     "zh": "{0} 进行中...",
-    "zh-TW": "{0} 進行中...",
+    "zh-TW": "{0} 進行中…",
     "ru": "{0} в процессе..."
   },
   "main.to_cancel": {
@@ -1374,7 +1374,7 @@
     "nl": "Save {0} / {1}",
     "ja": "セーブ {0} / {1}",
     "zh": "存档 {0} / {1}",
-    "zh-TW": "存檔 {0} / {1}",
+    "zh-TW": "儲存資料 {0} / {1}",
     "ru": "Сохранение {0} / {1}"
   },
   "main.file_n": {
@@ -1400,7 +1400,7 @@
     "nl": "Back-up geannuleerd.",
     "ja": "バックアップをキャンセルしました。",
     "zh": "已取消备份",
-    "zh-TW": "已取消備份",
+    "zh-TW": "已取消備份。",
     "ru": "Бэкап отменен."
   },
   "main.backup_success": {
@@ -1413,7 +1413,7 @@
     "nl": "Voortgang correct op schijf opgeslagen.",
     "ja": "進行状況はディスクに正しく保存されました。",
     "zh": "存档已成功保存到存储设备中",
-    "zh-TW": "存檔已成功儲存到儲存裝置中",
+    "zh-TW": "已成功將進度備份至儲存裝置。",
     "ru": "Прогресс успешно сохранен на диск."
   },
   "main.backup_success_fallback": {
@@ -1426,7 +1426,7 @@
     "nl": "Voortgang correct op schijf opgeslagen.\nHet systeemtoetsenbord was niet\nbeschikbaar. De voorgestelde doelmap\nis in plaats daarvan gebruikt.",
     "ja": "進行状況はディスクに正しく保存されました。\nシステムキーボードアプレットを利用できなかったため、推奨される保存先フォルダが使用されました。",
     "zh": "存档已成功保存到存储设备中\n无法打开系统键盘，已自动使用建议的备份目录名称",
-    "zh-TW": "存檔已成功儲存到儲存裝置中\n無法開啟系統鍵盤，已自動使用建議的備份目錄名稱",
+    "zh-TW": "已成功將進度備份至儲存裝置。\n無法開啟系統鍵盤，因此改用建議的目的資料夾名稱。",
     "ru": "Прогресс успешно сохранен на диск.\nСистемный апплет клавиатуры был\nнедоступен. Было использовано рекомендуемое\nимя папки."
   },
   "main.restore_success": {
@@ -1452,7 +1452,7 @@
     "nl": "Geselecteerde save herstellen?",
     "ja": "選択したセーブをリストアしますか?",
     "zh": "要恢复所选的存档吗？",
-    "zh-TW": "要還原所選的存檔嗎？",
+    "zh-TW": "要還原所選的儲存資料嗎？",
     "ru": "Восстановить выбранное сохранение?"
   },
   "main.confirm_delete": {
@@ -1465,7 +1465,7 @@
     "nl": "Geselecteerde back-up verwijderen?",
     "ja": "選択したバックアップを削除しますか?",
     "zh": "是否删除所选备份？",
-    "zh-TW": "是否刪除所選備份？",
+    "zh-TW": "要刪除所選的備份嗎？",
     "ru": "Удалить выбранный бэкап?"
   },
   "main.confirm_backup_save": {
@@ -1478,7 +1478,7 @@
     "nl": "Back-up maken van geselecteerde save?",
     "ja": "選択したセーブをバックアップしますか?",
     "zh": "要备份所选的存档吗？",
-    "zh-TW": "要備份所選的存檔嗎？",
+    "zh-TW": "要備份所選的儲存資料嗎？",
     "ru": "Сделать бэкап выбранного сохранения?"
   },
   "main.no_titles": {
@@ -1491,7 +1491,7 @@
     "nl": "Geen titels beschikbaar.",
     "ja": "利用可能なタイトルがありません。",
     "zh": "没有可用的游戏",
-    "zh-TW": "沒有可用的遊戲",
+    "zh-TW": "沒有可用的遊戲。",
     "ru": "Нет доступных тайтлов."
   },
   "main.new_backup": {
@@ -1504,7 +1504,7 @@
     "nl": "Nieuwe back-up",
     "ja": "新規バックアップ",
     "zh": "新建备份",
-    "zh-TW": "新建備份",
+    "zh-TW": "新增備份",
     "ru": "Новый бэкап"
   },
   "savekind.empty.user": {
@@ -1517,7 +1517,7 @@
     "nl": "Geen saves",
     "ja": "セーブがありません",
     "zh": "无存档",
-    "zh-TW": "無存檔",
+    "zh-TW": "沒有儲存資料",
     "ru": "Нет сохранений"
   },
   "savekind.empty.bcat": {
@@ -1530,7 +1530,7 @@
     "nl": "Geen BCAT-saves",
     "ja": "BCATセーブがありません",
     "zh": "无 BCAT 存档",
-    "zh-TW": "無 BCAT 存檔",
+    "zh-TW": "沒有 BCAT 儲存資料",
     "ru": "Нет BCAT сохранений"
   },
   "savekind.empty.device": {
@@ -1543,7 +1543,7 @@
     "nl": "Geen apparaatsaves",
     "ja": "デバイスセーブがありません",
     "zh": "无设备存档",
-    "zh-TW": "無裝置存檔",
+    "zh-TW": "沒有裝置儲存資料",
     "ru": "Нет Device сохранений"
   },
   "savekind.empty.system": {
@@ -1556,7 +1556,7 @@
     "nl": "Geen systeemsaves",
     "ja": "システムセーブがありません",
     "zh": "无系统存档",
-    "zh-TW": "無系統存檔",
+    "zh-TW": "沒有系統儲存資料",
     "ru": "Нет System сохранений"
   },
   "sort.alpha": {
@@ -1673,7 +1673,7 @@
     "nl": "Druk op A (OK) om nu te vernieuwen",
     "ja": "Aボタンで今すぐ更新",
     "zh": "按 A 键立即刷新",
-    "zh-TW": "按 A 鍵立即重新整理",
+    "zh-TW": "按 A 立即重新整理",
     "ru": "Нажмите A (OK) для обновления списка"
   },
   "transfer.receiver_stopped": {
@@ -1712,7 +1712,7 @@
     "nl": "Druk op B om te sluiten",
     "ja": "Bボタンで閉じる",
     "zh": "按 B 键关闭",
-    "zh-TW": "按 B 鍵關閉",
+    "zh-TW": "按 B 關閉",
     "ru": "Нажмите B для закрытия"
   },
   "transfer.cancel_hint": {
@@ -1725,7 +1725,7 @@
     "nl": "Houd B ingedrukt om te annuleren",
     "ja": "Bボタン長押しでキャンセル",
     "zh": "长按 B 键取消",
-    "zh-TW": "長按 B 鍵取消",
+    "zh-TW": "長按 B 取消",
     "ru": "Удерживайте B для отмены"
   },
   "transfer.cancelling": {
@@ -1738,7 +1738,7 @@
     "nl": "Annuleren...",
     "ja": "キャンセル中...",
     "zh": "正在取消...",
-    "zh-TW": "正在取消...",
+    "zh-TW": "正在取消…",
     "ru": "Отмена..."
   },
   "transfer.cancelled": {
@@ -1751,7 +1751,7 @@
     "nl": "Overdracht geannuleerd.",
     "ja": "転送をキャンセルしました。",
     "zh": "传输已取消",
-    "zh-TW": "傳輸已取消",
+    "zh-TW": "傳輸已取消。",
     "ru": "Передача отменена."
   },
   "transfer.completed": {
@@ -1764,7 +1764,7 @@
     "nl": "Overdracht voltooid.",
     "ja": "転送が完了しました。",
     "zh": "传输已完成",
-    "zh-TW": "傳輸已完成",
+    "zh-TW": "傳輸已完成。",
     "ru": "Передача выполнена."
   },
   "outcome.send_zip": {
@@ -1777,7 +1777,7 @@
     "nl": "Kon back-uppakket niet maken.",
     "ja": "バックアップパッケージの作成に失敗しました。",
     "zh": "无法创建备份包",
-    "zh-TW": "無法建立備份包",
+    "zh-TW": "無法建立備份套件。",
     "ru": "Не удалось создать пакет бэкапа."
   },
   "outcome.send_too_large": {
@@ -1790,7 +1790,7 @@
     "nl": "Back-up te groot om te verzenden (meer dan 4 GiB).",
     "ja": "バックアップが大きすぎて送信できません (4 GiB超)。",
     "zh": "备份过大，无法发送（超过 4 GB）",
-    "zh-TW": "備份過大，無法傳送（超過 4 GB）",
+    "zh-TW": "備份過大，無法傳送（超過 4 GiB）。",
     "ru": "Бэкап слишком большой для отправки (больше 4 ГиБ)."
   },
   "outcome.send_socket": {
@@ -1803,7 +1803,7 @@
     "nl": "Kon socket niet openen.",
     "ja": "ソケットを開けませんでした。",
     "zh": "无法建立网络连接",
-    "zh-TW": "無法建立網路連線",
+    "zh-TW": "無法建立網路連線。",
     "ru": "Не удалось открыть сокет."
   },
   "outcome.send_resolve": {
@@ -1816,7 +1816,7 @@
     "nl": "Ongeldig IP-adres.",
     "ja": "無効なIPアドレスです。",
     "zh": "IP 地址无效",
-    "zh-TW": "IP 地址無效",
+    "zh-TW": "IP 位址無效。",
     "ru": "Некорректный IP-адрес."
   },
   "outcome.send_connect": {
@@ -1829,7 +1829,7 @@
     "nl": "Verbinden mislukt.",
     "ja": "接続に失敗しました。",
     "zh": "连接失败",
-    "zh-TW": "連線失敗",
+    "zh-TW": "連線失敗。",
     "ru": "Не удалось подключиться."
   },
   "outcome.send_no_response": {
@@ -1842,7 +1842,7 @@
     "nl": "Ontvanger gaf geen reactie.",
     "ja": "受信側からの応答がありません。",
     "zh": "接收端无响应",
-    "zh-TW": "接收端無響應",
+    "zh-TW": "接收端沒有回應。",
     "ru": "Нет ответа от ресивера."
   },
   "outcome.send_receiver_error": {
@@ -1868,7 +1868,7 @@
     "nl": "Overdracht mislukt.",
     "ja": "転送に失敗しました。",
     "zh": "传输失败",
-    "zh-TW": "傳輸失敗",
+    "zh-TW": "傳輸失敗。",
     "ru": "Передача не удалась."
   },
   "outcome.send_interrupted": {
@@ -1881,7 +1881,7 @@
     "nl": "Verbinding onderbroken. De ontvanger\nheeft de overdracht mogelijk geannuleerd.",
     "ja": "接続が中断されました。受信側が\n転送をキャンセルした可能性があります。",
     "zh": "连接已中断。接收端可能已取消传输",
-    "zh-TW": "連線已中斷。接收端可能已取消傳輸",
+    "zh-TW": "連線已中斷。接收端可能已取消傳輸。",
     "ru": "Соединение прервано. Ресивер\nмог отменить передачу."
   },
   "main.transferring": {
@@ -1907,7 +1907,7 @@
     "nl": "Geselecteerde back-up is leeg.",
     "ja": "選択したバックアップは空です。",
     "zh": "所选备份为空",
-    "zh-TW": "所選備份為空",
+    "zh-TW": "所選備份是空的。",
     "ru": "Выбранный бэкап пуст."
   },
   "main.receiver_failed": {
@@ -1920,7 +1920,7 @@
     "nl": "Kon ontvanger niet starten.",
     "ja": "受信の開始に失敗しました。",
     "zh": "无法启动接收端",
-    "zh-TW": "無法啟動接收端",
+    "zh-TW": "無法啟動接收端。",
     "ru": "Не удалось запустить ресивер."
   },
   "main.invalid_ip_port": {
@@ -1933,7 +1933,7 @@
     "nl": "Ongeldig IP:POORT.",
     "ja": "無効なIP:PORTです。",
     "zh": "IP:端口 无效",
-    "zh-TW": "IP:埠 無效",
+    "zh-TW": "IP:連接埠格式無效。",
     "ru": "Некорректный IP:PORT."
   },
   "main.pin_invalid": {
@@ -1946,7 +1946,7 @@
     "nl": "PIN moet 4 cijfers hebben.",
     "ja": "PINは4桁で入力してください。",
     "zh": "PIN 必须为 4 位数字",
-    "zh-TW": "PIN 必須為 4 位數字",
+    "zh-TW": "PIN 必須是 4 位數。",
     "ru": "PIN-код должен состоять из 4 цифр."
   },
   "settings.conn.transfer": {
@@ -1972,7 +1972,7 @@
     "nl": "Back-ups verzenden/ontvangen via het netwerk",
     "ja": "ネットワーク経由でバックアップを送受信",
     "zh": "通过网络发送/接收备份",
-    "zh-TW": "透過網路傳送/接收備份",
+    "zh-TW": "透過網路傳送／接收備份",
     "ru": "Отправить / получить бэкапы через сеть"
   },
   "main.scripts": {
@@ -2011,7 +2011,7 @@
     "nl": "Een script uitvoeren",
     "ja": "スクリプトを実行",
     "zh": "运行一个脚本",
-    "zh-TW": "執行一個指令碼",
+    "zh-TW": "執行指令碼",
     "ru": "Запустить скрипт"
   },
   "scripts.empty": {
@@ -2024,7 +2024,7 @@
     "nl": "Geen scripts gevonden in /switch/Checkpoint/scripts",
     "ja": "/switch/Checkpoint/scripts にスクリプトがありません",
     "zh": "在 /switch/Checkpoint/scripts 目录下没有找到脚本",
-    "zh-TW": "在 /switch/Checkpoint/scripts 目錄下沒有找到指令碼",
+    "zh-TW": "在 /switch/Checkpoint/scripts 資料夾中找不到指令碼",
     "ru": "Скрипты не обнаружены в /switch/Checkpoint/scripts"
   },
   "scripts.universal_tag": {
@@ -2050,7 +2050,7 @@
     "nl": "vervangen",
     "ja": "上書き",
     "zh": "覆盖",
-    "zh-TW": "覆蓋",
+    "zh-TW": "已覆寫",
     "ru": "перезаписывающий"
   },
   "scripts.confirm_run": {
@@ -2063,7 +2063,7 @@
     "nl": "\"{0}\" uitvoeren?\nScripts kunnen saves en de inhoud van de SD-kaart wijzigen.",
     "ja": "\"{0}\"を実行しますか？\nスクリプトはセーブデータやSDカードの内容を変更できます。",
     "zh": "要运行\"{0}\"吗？\n脚本可能会修改存档和SD卡中的内容",
-    "zh-TW": "要執行\"{0}\"嗎？\n指令碼可能會修改存檔和SD卡中的內容",
+    "zh-TW": "要執行「{0}」嗎？\n指令碼可能會修改儲存資料與 SD 卡內容。",
     "ru": "Запустить \"{0}\"?\nСкрипты могут модифицировать сохранения и данные на SD-карте."
   },
   "scripts.running": {
@@ -2076,7 +2076,7 @@
     "nl": "{0} wordt uitgevoerd…",
     "ja": "{0}を実行中…",
     "zh": "{0}运行中",
-    "zh-TW": "{0}執行中",
+    "zh-TW": "正在執行 {0}…",
     "ru": "Запущен {0}…"
   },
   "scripts.success": {
@@ -2089,7 +2089,7 @@
     "nl": "\"{0}\" voltooid.",
     "ja": "「{0}」が完了しました。",
     "zh": "\"{0}\"执行完成",
-    "zh-TW": "\"{0}\"執行完成",
+    "zh-TW": "「{0}」執行完成。",
     "ru": "\"{0}\" выполнен."
   },
   "scripts.failed": {
@@ -2102,7 +2102,7 @@
     "nl": "\"{0}\" mislukt.",
     "ja": "「{0}」が失敗しました。",
     "zh": "\"{0}\"执行失败",
-    "zh-TW": "\"{0}\"執行失敗",
+    "zh-TW": "「{0}」執行失敗。",
     "ru": "Не удалось выполнить \"{0}\"."
   },
   "scripts.aborted": {
@@ -2115,7 +2115,7 @@
     "nl": "\"{0}\" afgebroken.",
     "ja": "「{0}」を中止しました。",
     "zh": "\"{0}\"执行已中止",
-    "zh-TW": "\"{0}\"執行已中止",
+    "zh-TW": "「{0}」已中止。",
     "ru": "\"{0}\" отменен."
   },
   "scripts.start_failed": {
@@ -2128,7 +2128,7 @@
     "nl": "De scriptthread kon niet worden gestart.",
     "ja": "スクリプトスレッドを開始できませんでした。",
     "zh": "脚本线程启动失败",
-    "zh-TW": "指令碼執行緒啟動失敗",
+    "zh-TW": "無法啟動指令碼執行緒。",
     "ru": "Не удалось запустить поток скрипта."
   },
   "scripts.no_items": {
@@ -2141,7 +2141,7 @@
     "nl": "Niets om te kiezen",
     "ja": "選択できる項目がありません",
     "zh": "没有可选择的项目",
-    "zh-TW": "沒有可選擇的專案",
+    "zh-TW": "沒有可選擇的項目",
     "ru": "Нечего выбрать"
   },
   "scripts.toggle": {
@@ -2180,7 +2180,7 @@
     "nl": "Log scrollen",
     "ja": "ログをスクロール",
     "zh": "滚动日志",
-    "zh-TW": "滾動日誌",
+    "zh-TW": "捲動日誌",
     "ru": "Прокрутка лога"
   },
   "scripts.view_log": {
@@ -2232,7 +2232,7 @@
     "nl": "Wacht op je antwoord…",
     "ja": "入力を待っています…",
     "zh": "等待你的回答…",
-    "zh-TW": "等待你的回答…",
+    "zh-TW": "等待你的回覆…",
     "ru": "Ожидание вашего ответа…"
   },
   "scripts.working": {
@@ -2271,7 +2271,7 @@
     "nl": "afsluitcode {0}",
     "ja": "終了コード {0}",
     "zh": "退出 {0}",
-    "zh-TW": "退出 {0}",
+    "zh-TW": "結束代碼 {0}",
     "ru": "выход {0}"
   }
 }
